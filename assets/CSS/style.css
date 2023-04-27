@@ -91,6 +91,67 @@ input :active {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.bouton-header:visited {
-    colors: ;
+
+/*Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
+L’ombre portée devra également être plus visible.
+● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un
+bouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il devra se
+remplir progressivement. Pour cette première version, l’effet peut apparaître au
+survol sur desktop au lieu du clic.*/
+
+
+/*fonctionnement*/
+.section-fonctionnement{
+   margin-top: 10%;
+   margin-left: 5%;
+}
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    
+}
+.bouton-fonctionnement{
+    text-decoration: none;
+}
+/*Restaurants*/
+.restaurant {
+    background-color:violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.restaurant-card img {
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing:border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/*footer*/
+footer, li{
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+
+}
+.titre-footer, li{
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+.footer-lien{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 5%;
+    display: flex;
+}
+.fa-solid, .fa-regular {
+    margin-right: 5%;
+}
+/*responsive*/
+@media screen and (max-width: 1920px) {
+
 }
