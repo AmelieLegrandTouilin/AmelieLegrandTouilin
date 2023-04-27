@@ -1,61 +1,73 @@
 /***** general*****/
 
-* { 
-    font-family:'Roboto';
-
+* {
+    font-family: 'Roboto';
+    color: black;
+    font-weight: bold;
 }
+
+h1,
+h2 {
+    font-family: 'Shriklhand';
+}
+
 /*Pour s’assurer que la page prend 100% de la hauteur de l’écran, il est de coutume d’ajouter la déclaration suivante :
 */
 *,
 :after,
 :before {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*Polices Logo et titres : Shrikhand Texte : Roboto*****/
 :root {
     --violet: #9356DC;
-    --rose:#FF79DA;
-    --vert:#99E2D0;
-    --main:rgb(235, 232, 232);
-    --back:#F2F2F2;
+    --rose: #FF79DA;
+    --vert: #99E2D0;
+    --main: rgb(235, 232, 232);
+    --back: #F2F2F2;
 }
 
-
-body header{
-    width: 100%;
-}
-   /**header**/
+/**header**/
 .logo {
-    height: 16px;
-    margin-top:3%;
+    height: 20px;
+    margin-top: 5%;
     margin-bottom: 3%;
     margin-left: 30%;
     margin-right: 30%;
 }
-.formulaire-header{
+
+.formulaire-header {
     background-color: var(--main);
     width: 100%;
     margin-left: 0;
     margin-right: 0;
     border-color: var(--main);
     height: 30px;
-   
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-input{
-   border: none;
-   background-color: var(--main);
-   display: flex;
-   justify-content: center;
-   text-align: center;
-   margin-left: 18%;
-   height: 30px;
+
+.fa-location-dot {
+    margin-left: 15%;
 }
-input :hover{
+
+input {
+    border: none;
     background-color: var(--main);
+    height: 30px;
+    margin-left: 3%;
 }
+
+input :active {
+    border-color: none;
+    décoration: none;
+    color: #9356DC
+}
+
 .intro-header {
     display: flex;
     justify-content: center;
@@ -64,15 +76,21 @@ input :hover{
     background-color: var(--back);
     padding-bottom: 5%;
 }
+
 .bouton-header {
     text-decoration: none;
-    background-color: var(--violet);
+    font-weight: bold;
+    background: linear-gradient(90deg, var(--rose), var(--violet));
     color: white;
     padding: 3%;
-    border-radius: 25%;
+    border-radius: 25px;
     font-size: 10px;
     margin-bottom: 10%;
     margin-top: 5%;
     width: 50%;
-    margin-right: 2%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.bouton-header:visited {
+    colors: ;
 }
