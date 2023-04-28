@@ -29,6 +29,10 @@ h2 {
     --back: #F2F2F2;
 }
 
+a{
+    text-decoration: none;
+}
+
 /**header**/
 .logo {
     height: 20px;
@@ -64,7 +68,7 @@ input {
 
 input :active {
     border-color: none;
-    décoration: none;
+    text-decoration: none;
     color: #9356DC
 }
 
@@ -91,7 +95,12 @@ input :active {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-
+.menu-fonctionnement {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
 /*Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
 L’ombre portée devra également être plus visible.
 ● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un
@@ -101,49 +110,83 @@ survol sur desktop au lieu du clic.*/
 
 
 /*fonctionnement*/
+
 .section-fonctionnement{
    margin-top: 10%;
    margin-left: 5%;
 }
 .fonctionnement{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; margin-bottom: 5%;
+    margin-bottom: 10%;
 }
 .bouton-fonctionnement{
     text-decoration: none;
+    background-color: var(--back);
+    border-radius: 10px;
+    width: 80%;
+    height: 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
 }
+.fa-list .fa-mobile-screen-button .fa-store{
+    margin-left: 5%;
+    color: red;
+}
+
 /*Restaurants*/
+.titre-restaurant{
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
 .restaurant {
-    background-color:violet;
+    background-color:var(--back);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
 }
 .restaurant-card img {
-   
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    box-sizing:border-box;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    box-sizing: border-box;
+    height: 130px; 
 }
+.restaurant-card{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.restaurant-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+h2{
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
 /*footer*/
-footer, li{
+
+footer, .list-footer{
     background-color: gray;
     display: flex;
     flex-direction: column;
 
 }
-.titre-footer, li{
+.titre-footer, .list-footer{
     margin-left: 5%;
     margin-bottom: 5%;
 }
 .footer-lien{
-    text-decoration: none;
     color: white;
     margin-bottom: 5%;
     display: flex;
@@ -151,6 +194,15 @@ footer, li{
 .fa-solid, .fa-regular {
     margin-right: 5%;
 }
+
+/*Quand l’application aura plus de menus, un “loader” sera nécessaire. Sur cette
+maquette, nous souhaitons en avoir un aperçu. Il devra apparaître pendant 1 à 3
+secondes quand on arrive sur la page d'accueil, couvrir l'intégralité de l'écran, et
+utiliser les animations CSS (pas de librairie). Le design de ce loader n’est pas défini,
+toute proposition est donc la bienvenue tant qu’elle est cohérente avec la charte
+graphique du site.*/
+
+
 /*responsive*/
 @media screen and (max-width: 1920px) {
 
