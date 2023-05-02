@@ -35,11 +35,13 @@ a{
 
 /**header**/
 .logo {
-    height: 20px;
-    margin-top: 5%;
-    margin-bottom: 3%;
-    margin-left: 30%;
-    margin-right: 30%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50px;
+}
+.logo-image{
+    height: 25px;
 }
 
 .formulaire-header {
@@ -81,7 +83,7 @@ input :active {
     padding-bottom: 5%;
 }
 
-.bouton-header {
+.bouton {
     text-decoration: none;
     font-weight: bold;
     background: linear-gradient(90deg, var(--rose), var(--violet));
@@ -206,4 +208,47 @@ graphique du site.*/
 /*responsive*/
 @media screen and (max-width: 1920px) {
 
+}
+
+/*générale page menu"*/
+.header-menu{
+ height: 50px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ padding-right: 20%;
+}
+
+.image-menu{
+    height: 200px;
+    width: 100%; 
+}
+.titre-coeur-header-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 10%;
+}
+.menu{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-left: 5%;
+}
+.box-menu{
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 100%;
+}
+.description-menu{
+    display: flex;
+    flex-wrap: wrap;
 }
