@@ -90,7 +90,7 @@ input :active {
     color: white;
     padding: 3%;
     border-radius: 25px;
-    font-size: 10px;
+    font-size: 14px;
     margin-bottom: 10%;
     margin-top: 5%;
     width: 50%;
@@ -156,6 +156,16 @@ survol sur desktop au lieu du clic.*/
     box-sizing: border-box;
     height: 130px; 
 }
+.container-text{
+    display: inline-block;
+    position: relative;
+}
+.text-restaurant-description{
+    background-color: var(--vert);
+    z-index:1;
+    text-align: center;
+    color: green;
+}
 .restaurant-card{
     margin-left: 5%;
     margin-right: 5%;
@@ -210,7 +220,7 @@ graphique du site.*/
 
 }
 
-/*générale page menu"*/
+/*page menu"*/
 .header-menu{
  height: 50px;
  display: flex;
@@ -241,6 +251,8 @@ graphique du site.*/
     padding-left: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    height: 250px;
 }
 main{
     display: flex;
@@ -248,7 +260,18 @@ main{
     border-radius: 20px;
     width: 100%;
 }
-.description-menu{
+.menu, div ,p, i{
     display: flex;
     flex-wrap: wrap;
+    font-size: 15px;
+}
+.description-menu{
+    display:flex;
+    flex-wrap: nowrap; 
+}
+.menu-description{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 8px;
 }
