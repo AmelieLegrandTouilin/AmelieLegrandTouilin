@@ -59,6 +59,7 @@ a{
 
 .fa-location-dot {
     margin-left: 15%;
+    color: black;
 }
 
 input {
@@ -86,7 +87,7 @@ input :active {
 .bouton {
     text-decoration: none;
     font-weight: bold;
-    background: linear-gradient(90deg, var(--rose), var(--violet));
+    background: linear-gradient(90deg, var(--violet), var(--rose));
     color: white;
     padding: 3%;
     border-radius: 25px;
@@ -95,14 +96,9 @@ input :active {
     margin-top: 5%;
     width: 50%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
 }
 
-.menu-fonctionnement {
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
 /*Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
 L’ombre portée devra également être plus visible.
 ● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un
@@ -113,6 +109,13 @@ survol sur desktop au lieu du clic.*/
 
 /*fonctionnement*/
 
+.menu-fonctionnement {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
 .section-fonctionnement{
    margin-top: 10%;
    margin-left: 5%;
@@ -122,20 +125,38 @@ survol sur desktop au lieu du clic.*/
     flex-direction: column; margin-bottom: 5%;
     margin-bottom: 10%;
 }
+.menu-fonctionnement{
+    display: flex;
+    align-items: center;
+
+}
+ .fa-1, .fa-2, .fa-3 {
+    color: white;
+    background-color: var(--violet);
+    padding: 2%;
+    border-radius: 50%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-top: 5%;
+    
+}
 .bouton-fonctionnement{
     text-decoration: none;
     background-color: var(--back);
     border-radius: 10px;
-    width: 80%;
+    width: 65%;
     height: 35px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-top: 5%;
     display: flex;
     align-items: center;
 }
-.fa-list .fa-mobile-screen-button .fa-store{
+.bouton-fonctionnement, .fa-solid{
     margin-left: 5%;
-    color: red;
+    margin-right: 3%;
+}
+.fa-solid:hover {
+    color: #9356DC;
 }
 
 /*Restaurants*/
@@ -156,15 +177,23 @@ survol sur desktop au lieu du clic.*/
     box-sizing: border-box;
     height: 130px; 
 }
-.container-text{
-    display: inline-block;
+ .fa-heart :active{
+    color: var(--violet);
+}
+.container {
     position: relative;
 }
-.text-restaurant-description{
-    background-color: var(--vert);
-    z-index:1;
+.restaurant-card .container .text {
+    background: var(--vert);
+    z-index: 1;
+    position: absolute;
     text-align: center;
-    color: green;
+    right: 4%;
+    top: 10%;
+    color:rgb(54, 199, 54);
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }
 .restaurant-card{
     margin-left: 5%;
@@ -203,8 +232,10 @@ footer, .list-footer{
     margin-bottom: 5%;
     display: flex;
 }
-.fa-solid, .fa-regular {
-    margin-right: 5%;
+ .fa-utensils, .fa-handshake-angle{
+    margin-right: 3%;
+    margin-left: 0;
+    color: white;
 }
 
 /*Quand l’application aura plus de menus, un “loader” sera nécessaire. Sur cette
@@ -221,6 +252,10 @@ graphique du site.*/
 }
 
 /*page menu"*/
+h3{
+ font-weight: bold; 
+ font-size: 16px;  
+}
 .header-menu{
  height: 50px;
  display: flex;
@@ -239,6 +274,9 @@ graphique du site.*/
     justify-content: space-evenly;
     margin-bottom: 10%;
 }
+.fa-regular{
+    margin-top: 3%;
+}
 .menu{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 20px;
@@ -246,24 +284,28 @@ graphique du site.*/
     flex-direction: column;
     width: 90%;
     padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 }
 .box-menu{
     padding-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 250px;
+   height: 250px;
 }
 main{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     width: 100%;
+    
 }
-.menu, div ,p, i{
+.menu, .menu-description ,p, i{
     display: flex;
     flex-wrap: wrap;
-    font-size: 15px;
+    font-size: 12px;
+    padding-top: 1%;
 }
 .description-menu{
     display:flex;
@@ -275,3 +317,9 @@ main{
     width: 90%;
     font-size: 8px;
 }
+
+.bouton-commander {
+    display: flex;
+    justify-content: center;
+}
+
