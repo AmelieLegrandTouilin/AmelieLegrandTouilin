@@ -6,13 +6,11 @@
     font-weight: bold;
 }
 
-h1,
-h2 {
+h1, h2, h3 {
     font-family: 'Shriklhand';
 }
 
-/*Pour s’assurer que la page prend 100% de la hauteur de l’écran, il est de coutume d’ajouter la déclaration suivante :
-*/
+
 *,
 :after,
 :before {
@@ -31,7 +29,21 @@ h2 {
 
 a{
     text-decoration: none;
+    list-style: none;
 }
+.loader{
+    border: 16px solid  var(--violet); /* Couleur de la bordure du loader */
+  border-top: 16px solid var(--rose); /* Couleur de la bordure du dessus */
+  border-radius: 50%; /* Forme circulaire du loader */
+  width: 80px; /* Largeur du loader */
+  height: 80px; /* Hauteur du loader */
+  animation: spin 2s linear infinite; /* Animation de rotation */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /* Angle initial de rotation */
+    100% { transform: rotate(360deg); } /* Angle final de rotation */
+  }
 
 /**header**/
 .logo {
@@ -81,22 +93,33 @@ input :active {
     flex-wrap: wrap;
     text-align: center;
     background-color: var(--back);
-    padding-bottom: 5%;
+    padding-bottom: 20%;
+    padding-top: 5%;
+  
+}
+
+.text-header{
+    width: 80%;
 }
 
 .bouton {
     text-decoration: none;
     font-weight: bold;
     background: linear-gradient(90deg, var(--violet), var(--rose));
+    transition:background-color 0.3s;
     color: white;
     padding: 3%;
     border-radius: 25px;
     font-size: 14px;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
     margin-top: 5%;
     width: 50%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
+}
+.bouton:hover 
+.bouton:focus{
+background-color: lighten (linear-gradient(90deg, var(--violet), var(--rose),20%)) ;
 }
 
 /*Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
@@ -122,41 +145,50 @@ survol sur desktop au lieu du clic.*/
 }
 .fonctionnement{
     display: flex;
-    flex-direction: column; margin-bottom: 5%;
+    flex-direction: column;
+     margin-bottom: 5%;
     margin-bottom: 10%;
+}
+.list-fonctionnement{
+    display: flex;
 }
 .menu-fonctionnement{
     display: flex;
     align-items: center;
-
 }
  .fa-1, .fa-2, .fa-3 {
     color: white;
     background-color: var(--violet);
-    padding: 2%;
+    padding: 1%;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 50%;
-    padding-left: 3%;
-    padding-right: 3%;
     margin-top: 5%;
-    
+    position: relative;
+    right: -15px;
+    top: -5px;
 }
 .bouton-fonctionnement{
     text-decoration: none;
     background-color: var(--back);
     border-radius: 10px;
-    width: 65%;
-    height: 35px;
+    width: 90%;
+    height: 60px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin-top: 5%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 15px;
 }
 .bouton-fonctionnement, .fa-solid{
     margin-left: 5%;
     margin-right: 3%;
-}
+    font-size: 20px;
+    
+}   
 .fa-solid:hover {
-    color: #9356DC;
+    color: var(--violet);
 }
 
 /*Restaurants*/
@@ -208,36 +240,53 @@ survol sur desktop au lieu du clic.*/
 
 .restaurant-description{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 5%;
-    margin-left: 5%;
+    flex-direction: column;
+   margin-left: 5%;
 }
-h2{
-    margin-left: 5%;
-    margin-bottom: 2%;
+.coeur{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+}
+.fa-heart{
+    font-size: 25px;
+}
+.fa-heart:hover{
+    color: var(--violet);
 }
 
+.heart{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 5%;
+}
 /*footer*/
 
 footer, .list-footer{
     background-color: #2d3436;
     display: flex;
     flex-direction: column;
-
+    justify-content: space-around;
+    height: 200px;
 }
 .titre-footer{
     font-family: 'shrikhand';
     color: white;
+    font-size: 20px;
+    margin-top: 5%;
 }
 .titre-footer, .list-footer{
     margin-left: 5%;
     margin-bottom: 5%;
+    list-style: none;
+}
+.footer-list{
+    margin: 10px;
 }
 .footer-lien{
     color: white;
-    margin-bottom: 5%;
-    display: flex;
+    margin-bottom: 10%;
 }
  .fa-utensils, .fa-handshake-angle{
     margin-right: 3%;
@@ -253,10 +302,26 @@ toute proposition est donc la bienvenue tant qu’elle est cohérente avec la ch
 graphique du site.*/
 
 /*page menu"*/
-h3{
- font-weight: bold; 
- font-size: 16px;  
+main{
+    position: relative;
+    top: -40px; 
+    background-color: white;
 }
+
+.titre-menu{
+    font-weight: bolder;
+    font-size: 30px; 
+    font-style: italic;
+ }
+.title-menu{
+    font-family: 'roboto';
+    margin-left: 5%;
+    font-size: 18px;
+    margin-top: 5%;
+    border-bottom: 3px solid var(--vert);
+    width: 10%;
+}
+
 .header-menu{
  height: 50px;
  display: flex;
@@ -273,14 +338,13 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
-.fa-regular{
-    margin-top: 3%;
-}
+
 .menu{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -292,7 +356,7 @@ h3{
     padding-left: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
    height: 250px;
 }
 main{
@@ -300,8 +364,8 @@ main{
     flex-direction: column;
     border-radius: 20px;
     width: 100%;
-    
 }
+
 .menu, .menu-description ,p, i{
     display: flex;
     flex-wrap: wrap;
@@ -311,6 +375,7 @@ main{
 .description-menu{
     display:flex;
     flex-wrap: nowrap; 
+    font-weight: bolder;
 }
 .menu-description{
     display: flex;
@@ -318,24 +383,28 @@ main{
     width: 90%;
     font-size: 8px;
 }
-
+.fa-euro-sign{
+    font-size: 12px;
+    padding-left: 10%;
+    
+}
 .bouton-commander {
     display: flex;
     justify-content: center;
+    
 }
 
 /*responsive*/
-@media screen and (min-width:600px) {
+@media screen and (min-width:500px) {
 
     header{
         padding-bottom: 0%;
     }
-    .intro-header{
+    .intro-header, p{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 2%;
-      
+        padding-bottom:5% ;
     }
 
     .fa-solid{
@@ -346,15 +415,13 @@ main{
         margin-left: 1%;
     }
     .bouton{
-        margin-bottom: 1%;
+       border-radius: 45px;
+       margin-top: 0%;
+       width: 20%;
+       height: 0px;
+       padding-top: 2%;
     }
 
-    .fonctionnement{
-        display: flex;
-     
-        width: 50%;
-        
-    }
     .section-fonctionnement{
      display: flex;
      flex-direction: column;
@@ -380,15 +447,61 @@ main{
         font-size: 15px;
         
     }
+    
     .list-footer{
         display: flex ;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-end;
         width: 75%;
+        margin: 0;
     }
+   
+  
     .footer-lien{
        margin-top: 8%;
+       margin-right: 5%;
        display: flex;
        justify-content: space-around;
+       width: 100%;
     } 
+
+    /*destop menu*/
+    .header-menu{
+        display: flex;
+        justify-content: space-around;
+        padding-right: 35%;
+    }
+    .image-menu{
+    height: 450px;
+    }
+  main{
+    width: 80%;
+    background-color: var(--back);
+    margin-left: 10%;
+    position: relative;
+    top:-60px;
+    height: 1700px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .title-menu{
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
+  .box-menu{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+  }
+  .menu{
+    background-color: white; 
+  }
+  .description-menu{
+    display: flex;
+    flex-direction: row;
+  }
+  .bouton-commander{
+    margin-bottom: 5%;
+    margin-top: 5%;
+  }
 }
