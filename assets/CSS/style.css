@@ -6,7 +6,7 @@
     font-weight: bold;
 }
 
-h1, h2, h3 {
+h1, h2, h3, .titre-footer {
     font-family: 'Shriklhand';
 }
 
@@ -20,7 +20,7 @@ h1, h2, h3 {
 }
 
 :root {
-    --violet: #9356DC;
+    --violet: rgb(146, 86, 220);
     --rose: #FF79DA;
     --vert: #99E2D0;
     --main: rgb(235, 232, 232);
@@ -95,7 +95,6 @@ input :active {
     background-color: var(--back);
     padding-bottom: 20%;
     padding-top: 5%;
-  
 }
 
 .text-header{
@@ -151,6 +150,9 @@ survol sur desktop au lieu du clic.*/
 }
 .list-fonctionnement{
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
 }
 .menu-fonctionnement{
     display: flex;
@@ -165,7 +167,7 @@ survol sur desktop au lieu du clic.*/
     border-radius: 50%;
     margin-top: 5%;
     position: relative;
-    right: -15px;
+    left: 35px;
     top: -5px;
 }
 .bouton-fonctionnement{
@@ -181,11 +183,11 @@ survol sur desktop au lieu du clic.*/
     font-weight: bold;
     font-size: 15px;
 }
+
 .bouton-fonctionnement, .fa-solid{
     margin-left: 5%;
     margin-right: 3%;
-    font-size: 20px;
-    
+    font-size: 20px; 
 }   
 .fa-solid:hover {
     color: var(--violet);
@@ -282,11 +284,11 @@ footer, .list-footer{
     list-style: none;
 }
 .footer-list{
-    margin: 10px;
+    margin: 5%;
 }
 .footer-lien{
     color: white;
-    margin-bottom: 10%;
+    
 }
  .fa-utensils, .fa-handshake-angle{
     margin-right: 3%;
@@ -303,8 +305,7 @@ graphique du site.*/
 
 /*page menu"*/
 main{
-    position: relative;
-    top: -40px; 
+    position: relative; 
     background-color: white;
 }
 
@@ -362,7 +363,8 @@ main{
 main{
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     width: 100%;
 }
 
@@ -391,7 +393,7 @@ main{
 .bouton-commander {
     display: flex;
     justify-content: center;
-    
+    padding-bottom: 10%;
 }
 
 /*responsive*/
@@ -404,7 +406,8 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom:5% ;
+        padding-bottom:2% ;
+        padding-top: 2%;
     }
 
     .fa-solid{
@@ -416,21 +419,47 @@ main{
     }
     .bouton{
        border-radius: 45px;
-       margin-top: 0%;
-       width: 20%;
-       height: 0px;
-       padding-top: 2%;
+       width: 15%;
+        height: 3px;
+       padding-top: 1%;
+       padding-bottom: 1.5%;
+       margin-top: 0;
     }
-
+    .titre-fonctionnement{
+        margin-top: 5%;
+        margin-left: 5%;
+    }
     .section-fonctionnement{
      display: flex;
      flex-direction: column;
-     margin-top: 5%;
+     margin: 0;
+    
     }
-
-    .bouton-fonctionnement{
+    .fonctionnement{
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        margin-top:3%;
+       width: 80%;
+       margin-left: 5%;
+    }
+    .list-fonctionnement{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        height: 50px;
+    }
+    .menu-fonctionnement{
+        width: 80%;
+    }
+    .bouton-fonctionnement{
+        width: 100%;
+        font-size: 16px;
+    }
+    .fa-1 .fa-2 .fa-3{
+        position: relative;
+        left:20px ;
+        bottom: -5px;
     }
     .restaurant-box{
         display: flex;
@@ -440,19 +469,30 @@ main{
     .restaurant-card{
         width: 35%;
     }
+    .restaurant-description{
+        display: flex;
+        flex-direction: column;
+    }
+    .paragraf-restaurant{
+        display: flex;
+        align-content: flex-start;
+    }
     footer, .titre-footer, .list-footer {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
-        font-size: 15px;
-        
+        justify-content: flex-start;
+        font-size: 12px;
     }
-    
+    .titre-footer{
+        margin-left: 5%;
+        font-size: 18px;
+    }
     .list-footer{
         display: flex ;
         flex-direction: row;
         justify-content: flex-end;
-        width: 75%;
+        width: 60%;
         margin: 0;
     }
    
@@ -462,10 +502,20 @@ main{
        margin-right: 5%;
        display: flex;
        justify-content: space-around;
-       width: 100%;
+       width: 180%;
     } 
+    .icon-footer{
+        margin-left: 5%;
+  }
 
     /*destop menu*/
+    .titre-coeur-header-menu{
+        display: flex;
+        justify-content: center;
+    }
+    .fa-heart{
+        margin-left: 2%;
+    }
     .header-menu{
         display: flex;
         justify-content: space-around;
@@ -478,30 +528,35 @@ main{
     width: 80%;
     background-color: var(--back);
     margin-left: 10%;
+    margin-top: -50px;
     position: relative;
-    top:-60px;
-    height: 1700px;
     display: flex;
     justify-content: space-between;
+    
+   
   }
   .title-menu{
     margin-top: 0%;
     margin-bottom: 2%;
+    width: 5%;
   }
   .box-menu{
     display: flex;
     justify-content: space-around;
-    height: 300px;
+    height: 500px;
   }
   .menu{
     background-color: white; 
+    margin-bottom: 5%;
+    padding-bottom: 0;
   }
   .description-menu{
     display: flex;
     flex-direction: row;
   }
   .bouton-commander{
-    margin-bottom: 5%;
-    margin-top: 5%;
+    padding-bottom: 8%;
+    
+   
   }
 }
