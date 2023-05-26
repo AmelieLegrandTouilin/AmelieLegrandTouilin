@@ -40,7 +40,7 @@ a{
   border-radius: 50%; /* Forme circulaire du loader */
   width: 200px; /* Largeur du loader */
   height: 200px; /* Hauteur du loader */
-  animation: spin 2s linear ; /* Animation de rotation */
+  animation: spin 2s linear forwards ; /* Animation de rotation */
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -59,6 +59,7 @@ a{
       }
       100% {
         opacity: 0;
+        display: none;
       }
   }
 
@@ -71,12 +72,28 @@ a{
   .loader {
     opacity: 0;
     visibility: visible;
-    
   }
   
+ .le-site {
+    animation: fade-out 6s linear forwards;
+  }
  
- 
-  
+  @keyframes fade-out {
+    0% {
+      opacity: 0;
+      display: none;
+    }
+    50% {
+      opacity: 0;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+      
+    }
+  }
   
   
   
