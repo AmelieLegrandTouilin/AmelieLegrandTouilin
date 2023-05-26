@@ -32,19 +32,55 @@ a{
     list-style: none;
 }
 .loader{
+    position: absolute;
+  top: 50%;
+  left: 40%;
     border: 16px solid  var(--violet); /* Couleur de la bordure du loader */
   border-top: 16px solid var(--rose); /* Couleur de la bordure du dessus */
   border-radius: 50%; /* Forme circulaire du loader */
-  width: 80px; /* Largeur du loader */
-  height: 80px; /* Hauteur du loader */
-  animation: spin 2s linear infinite; /* Animation de rotation */
+  width: 200px; /* Largeur du loader */
+  height: 200px; /* Hauteur du loader */
+  animation: spin 2s linear ; /* Animation de rotation */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); } /* Angle initial de rotation */
     100% { transform: rotate(360deg); } /* Angle final de rotation */
+    0% {
+        opacity: 0.5;
+      }
+      50% {
+        opacity: 1;
+      }
+      75%{
+          opacity: 0.5; 
+      }
+      100% {
+        opacity: 0;
+      }
   }
 
+  .loader.active {
+    opacity: 1;
+    visibility: visible;
+    
+    
+  }
+  .loader {
+    opacity: 0;
+    visibility: visible;
+    
+  }
+  
+ 
+ 
+  
+  
+  
+  
+  
 /**header**/
 .logo {
    display: flex;
@@ -276,7 +312,7 @@ footer, .list-footer{
     margin-top: 5%;
 }
 .titre-footer, .list-footer{
-    margin-left: 40%;
+    margin-left: 5%;
     margin-bottom: 5%;
     list-style: none;
 }
