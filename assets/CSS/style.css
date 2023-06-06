@@ -31,18 +31,20 @@ a{
     text-decoration: none;
     list-style: none;
 }
+ 
 .loader{
+    z-index: 999;
     position: absolute;
-  top: 50%;
-  left: 40%;
+    top: 30%;
+    left: 25%;
     border: 16px solid  var(--violet); /* Couleur de la bordure du loader */
-  border-top: 16px solid var(--rose); /* Couleur de la bordure du dessus */
-  border-radius: 50%; /* Forme circulaire du loader */
-  width: 200px; /* Largeur du loader */
-  height: 200px; /* Hauteur du loader */
-  animation: spin 2s linear forwards ; /* Animation de rotation */
-  opacity: 0;
-  transition: opacity 0.3s ease;
+    border-top: 16px solid var(--rose); /* Couleur de la bordure du dessus */
+    border-radius: 50%; /* Forme circulaire du loader */
+    width: 200px; /* Largeur du loader */
+    height: 200px; /* Hauteur du loader */
+    animation: spin 2s linear forwards ; /* Animation de rotation */
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 @keyframes spin {
@@ -55,7 +57,10 @@ a{
         opacity: 1;
       }
       75%{
-          opacity: 0.5; 
+          opacity: 1; 
+      }
+      85%{
+        opacity: 0.5;
       }
       100% {
         opacity: 0;
@@ -73,10 +78,10 @@ a{
     opacity: 0;
     visibility: visible;
   }
-  
  .le-site {
-    animation: fade-out 6s linear forwards;
-  }
+    animation: fade-out 2s linear forwards;
+    opacity: 0;
+  visibility: visible;}
  
   @keyframes fade-out {
     0% {
@@ -84,7 +89,7 @@ a{
       display: none;
     }
     50% {
-      opacity: 0;
+      opacity: 0.3;
     }
     75%{
         opacity: 0.5;
@@ -93,11 +98,7 @@ a{
       opacity: 1;
       
     }
-  }
-  
-  
-  
-  
+  }  
 /**header**/
 .logo {
    display: flex;
@@ -123,7 +124,6 @@ a{
 }
 
 .fa-location-dot {
-    margin-left: 15%;
     color: black;
 }
 
@@ -146,8 +146,8 @@ input :active {
     flex-wrap: wrap;
     text-align: center;
     background-color: var(--back);
-    padding-bottom: 20%;
-    padding-top: 5%;
+    padding-bottom: 10%;
+    padding-top: 10%;
 }
 
 .text-header{
@@ -219,20 +219,24 @@ survol sur desktop au lieu du clic.*/
     border-radius: 50%;
     margin-top: 5%;
     position: relative;
-    left: 10px;
+    left: 5px;
     top: -5px;
+    z-index: 1;
 }
 .bouton-fonctionnement{
     text-decoration: none;
     background-color: var(--back);
     border-radius: 10px;
-    width:320px;
+    width:400px;
     height: 60px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-weight: bold;
+    position: relative;
+    right: 20px;
+    top: 5px;
 }
 
 .bouton-fonctionnement, .fa-solid{
@@ -265,9 +269,7 @@ survol sur desktop au lieu du clic.*/
     box-sizing: border-box;
     height: 180px; 
 }
- .fa-heart :active{
-    color: var(--violet);
-}
+
 .container {
     position: relative;
 }
@@ -305,6 +307,10 @@ survol sur desktop au lieu du clic.*/
     font-size: 25px;
 }
 .fa-heart:hover{
+    opacity: 0;
+}
+.coeur-plein:hover{
+    opacity: 1;
     color: var(--violet);
 }
 
@@ -313,6 +319,9 @@ survol sur desktop au lieu du clic.*/
    justify-content: space-between;
    align-items: center;
    margin-bottom: 5%;
+}
+.coeur-plein{
+    opacity: 0;
 }
 /*footer*/
 
@@ -449,6 +458,10 @@ main{
 /*responsive*/
 @media screen and (min-width:500px) {
 
+    .loader{
+        top: 250px;
+        left: 500px;
+    }
     header{
         padding-bottom: 0%;
     }
@@ -527,6 +540,15 @@ main{
     .paragraf-restaurant{
         display: flex;
         align-content: flex-start;
+    }
+    .coeur{
+       
+    }
+    .coeur :hover{
+        opacity: 0;
+    }
+    .coeur-plein:hover{
+        opacity: 1;
     }
     footer, .titre-footer, .list-footer {
         display: flex;
