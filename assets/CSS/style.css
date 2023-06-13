@@ -70,10 +70,9 @@ a{
 
   .loader.active {
     opacity: 1;
-    visibility: visible;
-    
-    
+    visibility: visible; 
   }
+
   .loader {
     opacity: 0;
     visibility: visible;
@@ -298,15 +297,17 @@ survol sur desktop au lieu du clic.*/
     flex-direction: column;
    margin-left: 5%;
 }
-.coeur{
+.contour-coeur{
     display: flex;
     justify-content: flex-end;
     margin-right: 10%;
+    position: absolute;
+    right: 8%;
 }
-.fa-heart{
+.coeur-plein .contour-coeur{
     font-size: 25px;
 }
-.fa-heart:hover{
+.contour-coeur:hover{
     opacity: 0;
 }
 .coeur-plein:hover{
@@ -314,7 +315,7 @@ survol sur desktop au lieu du clic.*/
     color: var(--violet);
 }
 
-.heart{
+.contour-coeur{
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -329,7 +330,6 @@ footer, .list-footer{
     background-color: #2d3436;
     display: flex;
     flex-direction: column;
-    height: 200px;
 }
 .titre-footer{
     font-family: 'shrikhand';
@@ -402,6 +402,37 @@ main{
     margin-bottom: 5%;
 }
 
+.coeur-plein:active{
+    color: var(--violet);
+}
+.contour-coeur:active{
+    opacity: 0;
+}
+.contour-coeur{
+    opacity: 1;
+    size: 250px;
+}
+/*animation menu mobil */
+ .menu-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    visibility: visible;
+ }
+
+ .menu-item1{
+    transition-delay: 0.5s;
+    visibility: visible;
+ }
+ .menu-item2{
+    transition-delay: 1s;
+    visibility: visible;
+ }
+ .menu-item3{
+    transition-delay: 1.5s;
+    visibility: visible;
+ }
+ 
+
 .menu{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
@@ -459,8 +490,8 @@ main{
 @media screen and (min-width:500px) {
 
     .loader{
-        top: 250px;
-        left: 500px;
+        top: 25%;
+        left: 40%;
     }
     header{
         padding-bottom: 0%;
@@ -541,10 +572,10 @@ main{
         display: flex;
         align-content: flex-start;
     }
-    .coeur{
+    .contour-coeur{
        
     }
-    .coeur :hover{
+    .contour-coeur :hover{
         opacity: 0;
     }
     .coeur-plein:hover{
@@ -560,6 +591,7 @@ main{
     .titre-footer{
         margin-left: 5%;
         font-size: 18px;
+        margin-right: 40px;
     }
     .list-footer{
         display: flex ;
