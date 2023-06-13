@@ -355,13 +355,6 @@ footer, .list-footer{
     color: white;
 }
 
-/*Quand l’application aura plus de menus, un “loader” sera nécessaire. Sur cette
-maquette, nous souhaitons en avoir un aperçu. Il devra apparaître pendant 1 à 3
-secondes quand on arrive sur la page d'accueil, couvrir l'intégralité de l'écran, et
-utiliser les animations CSS (pas de librairie). Le design de ce loader n’est pas défini,
-toute proposition est donc la bienvenue tant qu’elle est cohérente avec la charte
-graphique du site.*/
-
 /*page menu"*/
 main{
     position: relative; 
@@ -486,7 +479,7 @@ main{
     padding-bottom: 10%;
 }
 
-/*responsive*/
+/*responsive tablette*/
 @media screen and (min-width:500px) {
 
     .loader{
@@ -637,8 +630,6 @@ main{
     position: relative;
     display: flex;
     justify-content: space-between;
-    
-   
   }
   .title-menu{
     margin-top: 0%;
@@ -647,12 +638,12 @@ main{
   }
   .box-menu{
     display: flex;
-    justify-content: space-around;
-    height: 375px;
+    justify-content: center;
+    height: 410px;
   }
   .menu{
     background-color: white; 
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     padding-bottom: 0;
   }
   .description-menu{
@@ -692,4 +683,9 @@ main{
   .bouton-commander{
     padding-bottom: 8%;
   }
+}
+
+/***** responsive ordi*****/
+@media (min-width: 992px) { 
+
 }
