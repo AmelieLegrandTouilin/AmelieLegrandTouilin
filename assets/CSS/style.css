@@ -417,8 +417,6 @@ menu-item1{
     animation: repas-affichage 0.5s ease-in 2.5s forwards;
  }
 
-
-
 @keyframes repas-affichage {
     0%{
         opacity: 0;
@@ -427,8 +425,6 @@ menu-item1{
         opacity: 1;
     }
 }
-
- 
 
 .menu{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -440,6 +436,30 @@ menu-item1{
     padding-top: 3%;
     padding-bottom: 3%;
 }
+
+/*animation coche */
+.menu-description {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .checkbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+  
+  .menu-description:hover .checkbox {
+    transform: translateX(0);
+  }
+  
 .box-menu{
     padding-left: 5%;
     display: flex;
@@ -656,36 +676,7 @@ main{
     display: flex;
     flex-direction: row;
   }
-  .checkbox {
-    width: 60px;
-    height: 65px;
-    background-color: white;
-    position: relative;
-    top: -10%;
-    right: -11%;
-    cursor: pointer;
-  }
-  
-  .checkbox::before {
-    content: "";
-    position: absolute;
-   
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 10px;
-    height: 20px;
-    border-bottom: 2px solid  grey;
-    border-right: 2px solid  grey;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-  
-  .checkbox:hover::before {
-    opacity: 1;
-  }
-  
-  .checkbox:hover {
-    background-color: rgb(168, 242, 168);
-  }
+
   .bouton-commander{
     padding-bottom: 8%;
   }
