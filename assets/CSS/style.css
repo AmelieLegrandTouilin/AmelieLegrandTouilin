@@ -157,7 +157,6 @@ input :active {
     text-decoration: none;
     font-weight: bold;
     background: linear-gradient(90deg, var(--violet), var(--rose));
-    transition:background-color 0.3s;
     color: white;
     padding: 3%;
     border-radius: 25px;
@@ -166,11 +165,11 @@ input :active {
     margin-top: 5%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .bouton:hover {
-background-color: lighten (linear-gradient(90deg, var(--violet), var(--rose),20%)) ;
-box-shadow: rgba(65, 65, 73, 0.2) 0px 7px 29px 0px;
+    background: green;
+    box-shadow: rgba(65, 65, 73, 0.2) 0px 7px 29px 0px;
 }
 
 /*Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
@@ -407,24 +406,31 @@ main{
     size: 250px;
 }
 /*animation menu mobil */
- .menu-item {
+ 
+menu-item1{
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    visibility: visible;
- }
-
- .menu-item1{
-    transition-delay: 0.5s;
-    visibility: visible;
+    animation: repas-affichage 0.5s ease-in 1s forwards;
  }
  .menu-item2{
-    transition-delay: 1s;
-    visibility: visible;
+    opacity: 0;
+    animation: repas-affichage 0.5s ease-in 1.5s forwards;
  }
  .menu-item3{
-    transition-delay: 1.5s;
-    visibility: visible;
+    opacity: 0;
+    animation: repas-affichage 0.5s ease-in 2s forwards;
  }
+
+
+
+@keyframes repas-affichage {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
  
 
 .menu{
