@@ -443,13 +443,13 @@ menu-item1{
     display: inline-block;
   }
   
-  .checkbox {
+  /*.checkbox {
     position: absolute;
     top: 0;
     right: 0;
     width: 20px;
     height: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #d70e0e;
     border-radius: 50%;
     background-color: transparent;
     transition: transform 0.3s ease;
@@ -458,8 +458,16 @@ menu-item1{
   
   .menu-description:hover .checkbox {
     transform: translateX(0);
-  }
+  */
   
+  .checkbox {
+position: absolute;
+background-color: aquamarine;
+transform: scaleX(0);
+  }
+
+ 
+
 .box-menu{
     padding-left: 5%;
     display: flex;
