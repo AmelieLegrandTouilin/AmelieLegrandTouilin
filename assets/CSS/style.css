@@ -288,29 +288,31 @@ input :active {
     flex-direction: column;
    margin-left: 5%;
 }
+/*animation coeur*/
+.restaurant-heart{
+    display: flex;
+    justify-content: space-between;
+}
 
-/*.container-heart {
+.container-heart {
     position: relative;
-    width: 30px;
-    height: 30px;
+    display: inline-block;
   }
-  .coeur-plein{
-    visibility: hidden;
-  }
+  
   .contour-coeur,
   .coeur-plein {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
   }
-  
-  .coeur-plein:hover {
+ .coeur-plein{
+    /*visibility: hidden;*/
+ }
+  .container-heart .coeur-plein:active {
     color: var(--violet);
     visibility: visible;
   }
- .contour-coeur:hover{
-    visibility: hidden;
- }*/
  
 /*footer*/
 
@@ -376,23 +378,23 @@ main{
     width: 100%; 
 }
 .titre-coeur-header-menu{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 5%;
-    margin-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.icon-container{
+    position: relative;
+    
 }
 
-.coeur-plein:active{
-    color: var(--violet);
+.coeur-plein, .contour-coeur{
+    position:absolute;
+  left: 30px;
+   top: 0;
+   bottom: 3px;
+   
 }
-.contour-coeur:active{
-    opacity: 0;
-}
-.contour-coeur{
-    opacity: 1;
-    size: 250px;
-}
+
 /*animation menu mobil */
  
 menu-item1{
@@ -440,19 +442,36 @@ menu-item1{
    left: 92%;
    bottom: 50%;
     display: flex;
+    visibility: hidden;
+    background-color:  rgb(54, 199, 54);
+    background-color:  rgb(54, 199, 54);
+    height: 50px; 
+    width: 50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
  .fa-circle-check{
     position: absolute;
-    color: rgb(54, 199, 54);
+    color: white;
     font-size: 24px;
     transform: translate(-50%, -50%);
-    visibility: hidden;
+    animation: rotation 5s  linear;
  } 
 
- .checkbox-container:hover .checkbox-container {
+ .menu:hover .checkbox-container {
     visibility:visible;
  }
+ @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      
+     
+  transform: rotate(360deg);
+    }
+  }
 .box-menu{
     padding-left: 5%;
     display: flex;
@@ -515,20 +534,15 @@ main{
     }
     .container-heart {
         position: relative;
-        width: 50px;
-        height: 50px;
+        width: 90px;
+        top:10px
       }
+    .coeur-plein .contour-coeur{
+        /*top: 150px;
+        right:15px;*/
+    }
       
-      .contour-coeur,
-      .coeur-plein {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-      }
-      
-      .coeur-plein:hover {
-        color: var(--violet);
-      }
+     
     .fa-solid{
         margin-right: 0;
         margin-bottom: 1%;
@@ -642,16 +656,7 @@ main{
      
         
     }
-    .contour-coeur, .coeur-plein{
-        position:absolute;
-        top:0;
-        left: 0;
-        font-size: 24px;
-        margin-left: 25px;
-    }
-    .coeur-plein:hover{
-        color: var(--violet);
-    }
+    
 
     .header-menu{
         display: flex;
