@@ -291,7 +291,6 @@ input :active {
 /*animation coeur*/
 .restaurant-heart{
     display: flex;
-    justify-content: space-between;
 }
 
 .container-heart {
@@ -303,7 +302,7 @@ input :active {
   .coeur-plein {
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: 50px;
     font-size: 20px;
   }
  .coeur-plein{
@@ -418,7 +417,7 @@ menu-item1{
         opacity: 1;
     }
 }
-
+/*animation coche */
 .menu{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
@@ -428,39 +427,39 @@ menu-item1{
     padding-left: 5%;
     padding-top: 3%;
     padding-bottom: 3%;
-}
-
-/*animation coche */
-.menu {
     position: relative;
     display: inline-block;
-  }
+    transition: transform 330ms ease-in-out;
+}
   
   .checkbox-container{
     position: relative;
     text-align: center;
-   left: 92%;
-   bottom: 50%;
+   left: 270px;
+   bottom: 40px;
     display: flex;
     visibility: hidden;
-    background-color:  rgb(54, 199, 54);
-    background-color:  rgb(54, 199, 54);
+    background-color:  var(--vert);
     height: 50px; 
     width: 50px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 
  .fa-circle-check{
     position: absolute;
+    top: 50%;
+    left: 50%;
     color: white;
     font-size: 24px;
     transform: translate(-50%, -50%);
     animation: rotation 5s  linear;
  } 
 
- .menu:hover .checkbox-container {
+ .menu:active .checkbox-container {
     visibility:visible;
+    transform: translateX(100%);
+   
  }
  @keyframes rotation {
     from {
@@ -611,6 +610,13 @@ main{
         display: flex;
         align-content: flex-start;
     }
+    checkbox-container{
+        position: relative;
+        text-align: center;
+       left:0px;
+       bottom: 10px;
+       
+      }
  
     footer, .titre-footer, .list-footer {
         display: flex;
