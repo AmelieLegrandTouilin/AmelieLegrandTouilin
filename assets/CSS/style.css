@@ -129,7 +129,7 @@ input {
     border: none;
     background-color: var(--main);
     height: 30px;
-    margin-left: 3%;
+    margin-left: 3px;
 }
 
 input :active {
@@ -144,8 +144,8 @@ input :active {
     flex-wrap: wrap;
     text-align: center;
     background-color: var(--back);
-    padding-bottom: 10%;
-    padding-top: 10%;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .text-header{
@@ -160,8 +160,8 @@ input :active {
     padding: 3%;
     border-radius: 25px;
     font-size: 14px;
-    margin-bottom: 0%;
-    margin-top: 5%;
+    margin-bottom: 0;
+    margin-top: 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     text-align: center;
     transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -172,6 +172,9 @@ input :active {
 }
 
 /*fonctionnement*/
+.titre-fonctionnement{
+    margin-left: 25px;
+}
 
 .menu-fonctionnement {
     text-decoration: none;
@@ -181,14 +184,14 @@ input :active {
 }
 
 .section-fonctionnement{
-   margin-top: 10%;
-   margin-left: 5%;
+   margin-top: 30px;
+   margin-left: 5px;
 }
 .fonctionnement{
     display: flex;
     flex-direction: column;
-     margin-bottom: 5%;
-    margin-bottom: 10%;
+     margin-bottom: 5px;
+    margin-bottom: 10px; 
 }
 .list-fonctionnement{
     display: flex;
@@ -207,7 +210,7 @@ input :active {
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 50%;
-    margin-top: 5%;
+    margin-top: 5px;
     position: relative;
     left: 5px;
     top: -5px;
@@ -230,7 +233,7 @@ input :active {
 }
 
 .bouton-fonctionnement, .fa-solid{
-    margin-right: 3%;
+    margin-right: 3px;
     font-size: 20px; 
 }   
 .fa-solid:hover {
@@ -243,9 +246,9 @@ input :active {
     padding-top: 5%;
 }
 .titre-restaurant{
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-top: 1%;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    margin-top: 10px;
 }
 .restaurant-box {
     display: flex;
@@ -271,14 +274,16 @@ input :active {
     right: 4%;
     top: 10%;
     color:rgb(54, 199, 54);
-    width: 40%;
+    width: 70px;
+    height:20px ;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .restaurant-card{
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
     background-color: white;
     border-radius: 20px;
 }
@@ -286,11 +291,12 @@ input :active {
 .restaurant-description{
     display: flex;
     flex-direction: column;
-   margin-left: 5%;
+   margin-left: 15px;
 }
 /*animation coeur*/
 .restaurant-heart{
     display: flex;
+    margin-bottom: 20px;
 }
 
 .container-heart {
@@ -306,40 +312,44 @@ input :active {
     font-size: 20px;
   }
  .coeur-plein{
-    /*visibility: hidden;*/
+    opacity: 0;
  }
-  .container-heart .coeur-plein:active {
+  .coeur-plein:hover {
     color: var(--violet);
-    visibility: visible;
+    opacity: 1;
   }
- 
+ /*transition pour animation coeur*/
 /*footer*/
+
+
 
 footer, .list-footer{
     background-color: #2d3436;
     display: flex;
     flex-direction: column;
+    
 }
 .titre-footer{
     font-family: 'shrikhand';
     color: white;
-    font-size: 20px;
-    margin-top: 5%;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-right: 25px;
 }
 .titre-footer, .list-footer{
-    margin-left: 5%;
-    margin-bottom: 5%;
+    margin-left: 20px;
+    margin-bottom: 20px;
     list-style: none;
 }
 .footer-list{
-    margin: 5%;
+    margin: 5px;
 }
 .footer-lien{
     color: white;
     
 }
  .fa-utensils, .fa-handshake-angle{
-    margin-right: 3%;
+    margin-right: 10px;
     margin-left: 0;
     color: white;
 }
@@ -357,9 +367,9 @@ main{
  }
 .title-menu{
     font-family: 'roboto';
-    margin-left: 5%;
+    margin-left: 5px;
     font-size: 18px;
-    margin-top: 5%;
+    margin-top: 5px;
     border-bottom: 3px solid var(--vert);
     width: 10%;
 }
@@ -369,7 +379,7 @@ main{
  display: flex;
  justify-content: space-around;
  align-items: center;
- padding-right: 20%;
+ padding-right: 150px;
 }
 
 .image-menu{
@@ -428,7 +438,6 @@ menu-item1{
     padding-top: 3%;
     padding-bottom: 3%;
     position: relative;
-    display: inline-block;
     transition: transform 330ms ease-in-out;
 }
   
@@ -490,7 +499,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     font-size: 12px;
-    padding-top: 1%;
+    padding-top: 5px;
 }
 .description-menu{
     display:flex;
@@ -505,13 +514,13 @@ main{
 }
 .fa-euro-sign{
     font-size: 12px;
-    padding-left: 10%;
+    padding-left: 5px;
     
 }
 .bouton-commander {
     display: flex;
     justify-content: center;
-    padding-bottom: 10%;
+    padding-bottom: 10px;
 }
 
 /*responsive tablette*/
@@ -522,32 +531,27 @@ main{
         left: 40%;
     }
     header{
-        padding-bottom: 0%;
+        padding-bottom: 0;
     }
     .intro-header, p{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom:2% ;
-        padding-top: 2%;
+        padding-bottom:40px;
+        padding-top: 40px;
     }
     .container-heart {
         position: relative;
         width: 90px;
         top:10px
       }
-    .coeur-plein .contour-coeur{
-        /*top: 150px;
-        right:15px;*/
-    }
       
-     
     .fa-solid{
-        margin-right: 0;
-        margin-bottom: 1%;
+        margin-left: 65px;
+        margin-bottom: 3px;
     }
    input{
-        margin-left: 1%;
+        margin-left: 20px;
     }
     .bouton{
        border-radius: 45px;
@@ -560,8 +564,8 @@ main{
       padding-right: 2px;
     }
     .titre-fonctionnement{
-        margin-top: 5%;
-        margin-left: 5%;
+        margin-top: 45px;
+        margin-left: 150px;
     }
     .section-fonctionnement{
      display: flex;
@@ -572,16 +576,15 @@ main{
     .fonctionnement{
         display: flex;
         flex-direction: row;
-        margin-top:3%;
        width: 80%;
-       margin-left: 5%;
+       margin-left: 70px;
     }
     .list-fonctionnement{
         width: 100%;
         display: flex;
         flex-direction: row;
         margin-left: 0;
-        height: 50px;
+        height: 190px;
     }
     .menu-fonctionnement{
         width: 500px;
@@ -592,12 +595,16 @@ main{
     .fa-1 .fa-2 .fa-3{
         position: relative;
         left:0px ;
-        bottom: -5px;
+    }
+    .titre-restaurant{
+        margin-left: 200px;
+        font-size: 30px;
     }
     .restaurant-box{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .restaurant-card{
         width: 35%;
@@ -605,10 +612,13 @@ main{
     .restaurant-description{
         display: flex;
         flex-direction: column;
+       
     }
     .paragraf-restaurant{
         display: flex;
         align-content: flex-start;
+        padding: 2px;
+
     }
     checkbox-container{
         position: relative;
@@ -626,30 +636,28 @@ main{
         font-size: 12px;
     }
     .titre-footer{
-        margin-left: 5%;
+        margin-left: 10px;
         font-size: 18px;
-        margin-right: 40px;
+        margin-right: 30px;
+        margin-top: 20px;
     }
     .list-footer{
         display: flex ;
         flex-direction: row;
-        justify-content: flex-end;
-        width: 60%;
+        width: 50%;
         margin: 0;
+        justify-content: space-around;
     }
-   
   
     .footer-lien{
        margin-top: 8%;
-       margin-right: 5%;
+       margin-right: 5px;
        display: flex;
-       justify-content: space-around;
        width: 180%;
     } 
     .icon-footer{
-        margin-left: 5%;
-  }
-
+        margin-left: 3px;
+    }
     /*destop menu*/
     .titre-coeur-header-menu{
         display: flex;
