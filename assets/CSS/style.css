@@ -437,6 +437,7 @@ menu-item1{
 }
 /*animation coche */
 .menu{
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     display: flex;
@@ -449,17 +450,26 @@ menu-item1{
   
   .checkbox-container{
     position: relative;
-    text-align: center;
-   left: 270px;
-   bottom: 40px;
-    display: flex;
-    visibility: hidden;
+    right: 0;
+    bottom:0;
+    top: 0;
+    left: 0;
     background-color:  var(--vert);
-    height: 50px; 
+    height: 40px; 
     width: 50px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    animation: slideToLeft 2s  linear;
+    /*visibility: hidden;*/
+}
+  @keyframes slideToLeft {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
  .fa-circle-check{
     position: absolute;
@@ -471,7 +481,7 @@ menu-item1{
     animation: rotation 5s  linear;
  } 
 
- .menu:active .checkbox-container {
+ .menu .checkbox-container:hover {
     visibility:visible;
     transform: translateX(100%);
    
@@ -526,7 +536,10 @@ main{
 .bouton-commander {
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+}
+.bouton {
+    width: 160px;
 }
 
 /*responsive tablette*/
