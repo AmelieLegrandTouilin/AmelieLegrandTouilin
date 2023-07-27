@@ -483,9 +483,16 @@ menu-item1{
     overflow-x: hidden;
     visibility: visible;
     width: 25%;
+   
+}
+
+.menu:hover
+.menu-description p ,h3{
     overflow: hidden;
     white-space: nowrap; 
     text-overflow: ellipsis;
+  background-color: #9356DC;
+  width: 200px;
 }
 
  .fa-circle-check{
@@ -552,6 +559,7 @@ main{
 }
 .menu-description p {
  font-size: 15px;
+ width: 200px;
 }
 .fa-euro-sign{
     font-size: 12px;
