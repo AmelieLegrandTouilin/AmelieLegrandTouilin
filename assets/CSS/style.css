@@ -9,8 +9,12 @@
 h1, h2, h3, .titre-footer {
     font-family: 'Shriklhand';
 }
-
-
+h1{
+    font-size: 30px;
+}
+h3 {
+font-size: 19px;
+}
 *,
 :after,
 :before {
@@ -324,10 +328,8 @@ input :active {
     color: var(--violet);
     opacity: 1;
   }
- /*transition pour animation coeur*/
+ 
 /*footer*/
-
-
 
 footer, .list-footer{
     background-color: #2d3436;
@@ -362,18 +364,25 @@ footer, .list-footer{
 
 /*page menu"*/
 main{
-    position: relative; 
-    background-color: white;
+    width: 100%;
+    background-color: var(--back);
+    margin-top: -50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
 
 .titre-menu{
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 30px; 
     font-style: italic;
+    font-family:  'Shrikhand';
+
+
  }
 .title-menu{
     font-family: 'roboto';
-    margin-left: 5px;
+    margin-left: 25px;
     font-size: 18px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -385,8 +394,9 @@ main{
  height: 50px;
  display: flex;
  justify-content: space-around;
- align-items: center;
- padding-right: 150px;
+ align-items: space-evenly;
+ padding-right: 125px;
+ padding-top: 15px;
 }
 
 .image-menu{
@@ -395,8 +405,9 @@ main{
 }
 .titre-coeur-header-menu{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding-top: 15px;
+  padding-left:25px ;
 }
 .icon-container{
     position: relative;
@@ -405,10 +416,9 @@ main{
 
 .coeur-plein, .contour-coeur{
     position:absolute;
-  left: 30px;
-   top: 0;
-   bottom: 3px;
-   
+    left: 40px;
+    top: 10px;
+    bottom: 5px;
 }
 
 /*animation menu mobil */
@@ -441,38 +451,48 @@ menu-item1{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 90%;
-    padding-left: 15px;
+    width: 80%;
+    padding-left: 10px;
     position: relative;
     transition: transform 330ms ease-in-out;
+    white-space: nowrap;
 }
   
 .checkbox-container{
-    height: 59px;
-    width: 87px;
+    height: 70px;
+    width: 0;
     background-color:  var(--vert);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     position: relative;
-    right: -78px;
+    bottom:15px;
+    right:-15px;
     visibility: collapse;
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(40px);
+    transition: all ease 0.5s;
+    
 }
 
 .menu:hover .checkbox-container{
-    transform: translateX(-78px);
+    transform: translateX(0px);
     transition: all ease 0.4s;
     overflow-x: hidden;
     visibility: visible;
+    width: 25%;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
 }
 
  .fa-circle-check{
-    position: absolute;
-    top: 50%;
-    left: 50%;
+ 
     color: white;
     font-size: 24px;
-    transform: translate(-50%, -50%);
+   
  } 
 
  .rotation {
@@ -481,7 +501,7 @@ menu-item1{
 
  .menu:hover .rotation{
     visibility: visible;
-    animation: rotation 0.5s  linear;
+    animation: 1s 1 forwards rotation  ;
  }
 
 
@@ -494,39 +514,56 @@ menu-item1{
     }
   }
 .box-menu{
-    padding-left: 5%;
+    padding-left: 80px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-   height: 250px;
+    height: 250px;
+}
+.box-menu-2{
+    height: 300px;
+    padding-left: 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
 main{
     display: flex;
     flex-direction: column;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 .menu{
     display: flex;
     flex-direction: row;
+    height: 70px;
+    padding: 15px;
 }
 .checkbox-box{
     display: flex;
 
 }
-.description-menu{
+.menu-description{
     display:flex;
-    flex-direction: row;
-    font-weight: bolder;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     width: 90%;
     font-size: 8px;
+}
+.menu-description p {
+ font-size: 15px;
 }
 .fa-euro-sign{
     font-size: 12px;
     padding-left: 5px;
     
+}
+.price-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+  
 }
 .bouton-commander {
     display: flex;
@@ -547,7 +584,7 @@ main{
     header{
         padding-bottom: 0;
     }
-    .intro-header, p{
+    .intro-header, .paragraf{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -560,10 +597,6 @@ main{
         top:10px
       }
       
-    .fa-solid{
-        margin-left: 65px;
-        margin-bottom: 3px;
-    }
    input{
         margin-left: 20px;
     }
@@ -585,13 +618,12 @@ main{
      display: flex;
      flex-direction: column;
      margin: 0;
-    
     }
     .fonctionnement{
         display: flex;
         flex-direction: row;
        width: 80%;
-       margin-left: 70px;
+       margin-left: 150px;
     }
     .list-fonctionnement{
         width: 100%;
@@ -632,14 +664,8 @@ main{
         display: flex;
         align-content: flex-start;
         padding: 2px;
-
     }
-    checkbox-container{
-        position: relative;
-        text-align: center;
-       left:0px;
-       bottom: 10px;
-      }
+  
       .restaurant-heart{
         position: relative;
         display: flex;
@@ -702,37 +728,58 @@ main{
     .image-menu{
     height: 450px;
     }
-  main{
-    width: 80%;
+    main{
+    width: 70%;
     background-color: var(--back);
-    margin-left: 10%;
+    margin-left: 15%;
     margin-top: -50px;
     position: relative;
     display: flex;
     justify-content: space-between;
   }
-  .title-menu{
-    margin-top: 0%;
+    .title-menu{
+    margin-top: 15px;
     margin-bottom: 2%;
+    margin-left: 20%;
     width: 5%;
   }
-  .box-menu{
+    .box-menu{
     display: flex;
     justify-content: center;
-    height: 410px;
+    margin-left: 10%;
+    
   }
-  .menu{
+    .menu{
     background-color: white; 
-    margin-bottom: 2%;
-    padding-bottom: 0;
+    margin-bottom: 15px;
   }
+
+    .menu, h3{
+        padding-bottom: 2px;
+    }
+
   .description-menu{
     display: flex;
     flex-direction: row;
+    align-items: center;
+  }
+  .menu-description, p {
+    padding: 0%;
+  }
+ .fa-euro-sign{
+    padding-left: 2px;
+    font-size: 16px;
+    font-weight: normal;
   }
 
+  .icon-container{
+    position:relative;
+    width: 10px;
+    height: 20px;    
+}
   .bouton-commander{
-    padding-bottom: 8%;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
 }
 
