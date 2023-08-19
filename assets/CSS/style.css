@@ -407,7 +407,7 @@ main{
   display: flex;
   justify-content: flex-start;
   padding-top: 15px;
-  padding-left:25px ;
+  padding-left:75px ;
 }
 .icon-container{
     position: relative;
@@ -451,12 +451,13 @@ menu-item1{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 400px;
     padding-left: 10px;
     position: relative;
     transition: transform 330ms ease-in-out;
     white-space: nowrap;
 }
+
   
 .checkbox-container{
     height: 70px;
@@ -482,24 +483,22 @@ menu-item1{
     transition: all ease 0.4s;
     overflow-x: hidden;
     visibility: visible;
-    width: 25%;
+    width: 35%;
    
 }
 
 .menu:hover
-.menu-description p ,h3{
+.menu-descriptionn p ,h3{
     overflow: hidden;
     white-space: nowrap; 
     text-overflow: ellipsis;
-  background-color: #9356DC;
-  width: 200px;
+    width: 200px;
 }
 
+
  .fa-circle-check{
- 
     color: white;
     font-size: 24px;
-   
  } 
 
  .rotation {
@@ -521,7 +520,8 @@ menu-item1{
     }
   }
 .box-menu{
-    padding-left: 80px;
+    padding-left: 50px;
+    margin-RIGHT: 00PX;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -529,7 +529,7 @@ menu-item1{
 }
 .box-menu-2{
     height: 300px;
-    padding-left: 5%;
+    padding-left: 10%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -558,8 +558,8 @@ main{
     font-size: 8px;
 }
 .menu-description p {
- font-size: 15px;
- width: 200px;
+    font-size: 15px;
+    width: 200px;
 }
 .fa-euro-sign{
     font-size: 12px;
@@ -682,9 +682,9 @@ main{
     .contour-coeur,
     .coeur-plein {
         position:absolute;
-    top: 15px;
-    left: 50px;
-    font-size: 20px;
+        top: 15px;
+        left: 50px;
+        font-size: 20px;
   }
  
     footer, .titre-footer, .list-footer {
