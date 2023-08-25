@@ -6,15 +6,21 @@
     font-weight: bold;
 }
 
-h1, h2, h3, .titre-footer {
+h1,
+h2,
+h3,
+.titre-footer {
     font-family: 'Shriklhand';
 }
-h1{
+
+h1 {
     font-size: 30px;
 }
+
 h3 {
-font-size: 19px;
+    font-size: 19px;
 }
+
 *,
 :after,
 :before {
@@ -31,84 +37,118 @@ font-size: 19px;
     --back: #F2F2F2;
 }
 
-a{
+.main-container {
+    padding: 0px 15px;
+}
+
+img{
+    object-fit: cover;
+}
+
+a {
     text-decoration: none;
     list-style: none;
 }
- 
-.loader{
+
+.loader {
     z-index: 999;
     position: absolute;
     top: 30%;
     left: 25%;
-    border: 16px solid  var(--violet); /* Couleur de la bordure du loader */
-    border-top: 16px solid var(--rose); /* Couleur de la bordure du dessus */
-    border-radius: 50%; /* Forme circulaire du loader */
-    width: 200px; /* Largeur du loader */
-    height: 200px; /* Hauteur du loader */
-    animation: spin 2s linear forwards ; /* Animation de rotation */
+    border: 16px solid var(--violet);
+    /* Couleur de la bordure du loader */
+    border-top: 16px solid var(--rose);
+    /* Couleur de la bordure du dessus */
+    border-radius: 50%;
+    /* Forme circulaire du loader */
+    width: 200px;
+    /* Largeur du loader */
+    height: 200px;
+    /* Hauteur du loader */
+    animation: spin 2s linear forwards;
+    /* Animation de rotation */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 @keyframes spin {
-    0% { transform: rotate(0deg); }         /* Angle initial de rotation */
-    100% { transform: rotate(360deg); }     /* Angle final de rotation */
+    0% {
+        transform: rotate(0deg);
+    }
+
+    /* Angle initial de rotation */
+    100% {
+        transform: rotate(360deg);
+    }
+
+    /* Angle final de rotation */
     0% {
         opacity: 0.5;
-      }
-      50% {
+    }
+
+    50% {
         opacity: 1;
-      }
-      75%{
-          opacity: 1; 
-      }
-      85%{
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    85% {
         opacity: 0.5;
-      }
-      100% {
+    }
+
+    100% {
         opacity: 0;
         display: none;
-      }
-  }
+    }
+}
 
-  .loader.active {
+.loader.active {
     opacity: 1;
-    visibility: visible; 
-  }
+    visibility: visible;
+}
 
-  .loader {
+.loader {
     opacity: 0;
     visibility: visible;
-  }
- .le-site {
+}
+
+.le-site {
     animation: fade-out 2s linear forwards;
     opacity: 0;
-  visibility: visible;}
- 
-  @keyframes fade-out {
+    visibility: visible;
+}
+
+@keyframes fade-out {
     0% {
-      opacity: 0;
-      display: none;
+        opacity: 0;
+        display: none;
     }
+
     50% {
-      opacity: 0.3;
+        opacity: 0.3;
     }
-    75%{
+
+    75% {
         opacity: 0.5;
     }
+
     100% {
-      opacity: 1;
-      
+        opacity: 1;
+
     }
-  }  
+}
+
 /**header**/
 .logo {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 }
-.logo-image{
+
+.logo-image {
     height: 25px;
 }
 
@@ -152,7 +192,7 @@ input :active {
     padding-top: 40px;
 }
 
-.text-header{
+.text-header {
     width: 80%;
 }
 
@@ -170,14 +210,15 @@ input :active {
     text-align: center;
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 .bouton:hover {
     background: linear-gradient(90deg, rgb(178, 141, 224), rgb(242, 183, 226));
     box-shadow: rgba(5, 0, 0, 0.2) 0px 7px 29px 0px;
 }
 
 /*fonctionnement*/
-.titre-fonctionnement{
-    margin-left: 25px;
+.titre-fonctionnement {
+    margin-left: 40%;
 }
 
 .menu-fonctionnement {
@@ -187,27 +228,33 @@ input :active {
     justify-content: space-around;
 }
 
-.section-fonctionnement{
-   margin-top: 30px;
-   margin-left: 5px;
+.section-fonctionnement {
+    margin-top: 30px;
+    margin-left: 5px;
 }
-.fonctionnement{
+
+.fonctionnement {
     display: flex;
     flex-direction: column;
-     margin-bottom: 5px;
-    margin-bottom: 10px; 
+    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
-.list-fonctionnement{
+
+.list-fonctionnement {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 250px;
 }
-.menu-fonctionnement{
+
+.menu-fonctionnement {
     display: flex;
     align-items: center;
 }
- .fa-1, .fa-2, .fa-3 {
+
+.fa-1,
+.fa-2,
+.fa-3 {
     color: white;
     background-color: var(--violet);
     padding: 1%;
@@ -220,11 +267,12 @@ input :active {
     top: -5px;
     z-index: 1;
 }
-.bouton-fonctionnement{
+
+.bouton-fonctionnement {
     text-decoration: none;
     background-color: var(--back);
     border-radius: 10px;
-    width:400px;
+    width: 400px;
     height: 60px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     display: flex;
@@ -236,40 +284,46 @@ input :active {
     top: 5px;
 }
 
-.bouton-fonctionnement, .fa-solid{
+.bouton-fonctionnement,
+.fa-solid {
     margin-right: 3px;
-    font-size: 20px; 
-}   
+    font-size: 20px;
+}
+
 .fa-solid:hover {
     color: var(--violet);
 }
 
 /*Restaurants*/
-.restaurant{
-    background-color:var(--back);
+.restaurant {
+    background-color: var(--back);
     padding-top: 5%;
 }
-.titre-restaurant{
+
+.titre-restaurant {
     margin-bottom: 15px;
     margin-left: 25px;
     margin-top: 10px;
 }
+
 .restaurant-box {
     display: flex;
     flex-direction: column;
 }
+
 .restaurant-card img {
     object-fit: cover;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-sizing: border-box;
-    height: 180px; 
+    height: 180px;
 }
 
 .container {
     position: relative;
 }
+
 .restaurant-card .container .text {
     background: var(--vert);
     z-index: 1;
@@ -277,14 +331,15 @@ input :active {
     text-align: center;
     right: 4%;
     top: 10%;
-    color:rgb(54, 199, 54);
+    color: rgb(54, 199, 54);
     width: 70px;
-    height:20px ;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.restaurant-card{
+
+.restaurant-card {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -292,18 +347,20 @@ input :active {
     border-radius: 20px;
 }
 
-.restaurant-description{
+.restaurant-description {
     display: flex;
     flex-direction: column;
-   margin-left: 15px;
+    margin-left: 15px;
 }
+
 /*animation coeur*/
 
-.checkbox-box{
+.checkbox-box {
     display: flex;
 
 }
-.restaurant-heart{
+
+.restaurant-heart {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -312,58 +369,68 @@ input :active {
 .container-heart {
     position: relative;
     display: inline-block;
-  }
-  
-  .contour-coeur,
-  .coeur-plein {
+}
+
+.contour-coeur,
+.coeur-plein {
     position: absolute;
     top: 15px;
     right: 50px;
     font-size: 20px;
-  }
- .coeur-plein{
+}
+
+.coeur-plein {
     opacity: 0;
- }
-  .coeur-plein:hover {
+}
+
+.coeur-plein:hover {
     color: var(--violet);
     opacity: 1;
-  }
- 
+}
+
 /*footer*/
 
-footer, .list-footer{
+footer,
+.list-footer {
     background-color: #2d3436;
     display: flex;
     flex-direction: column;
-    
+
 }
-.titre-footer{
+
+.titre-footer {
     font-family: 'shrikhand';
     color: white;
     font-size: 25px;
     margin-top: 10px;
     margin-right: 25px;
 }
-.titre-footer, .list-footer{
+
+.titre-footer,
+.list-footer {
     margin-left: 20px;
     margin-bottom: 20px;
     list-style: none;
 }
-.footer-list{
+
+.footer-list {
     margin: 5px;
 }
-.footer-lien{
+
+.footer-lien {
     color: white;
-    
+
 }
- .fa-utensils, .fa-handshake-angle{
+
+.fa-utensils,
+.fa-handshake-angle {
     margin-right: 10px;
     margin-left: 0;
     color: white;
 }
 
 /*page menu"*/
-main{
+main {
     width: 100%;
     background-color: var(--back);
     margin-top: -50px;
@@ -372,17 +439,17 @@ main{
     justify-content: space-between;
 }
 
-.titre-menu{
+.titre-menu {
     font-weight: bold;
-    font-size: 30px; 
+    font-size: 30px;
     font-style: italic;
-    font-family:  'Shrikhand';
+    font-family: 'Shrikhand';
 
 
- }
-.title-menu{
+}
+
+.title-menu {
     font-family: 'roboto';
-    margin-left: 25px;
     font-size: 18px;
     margin-top: 25px;
     margin-bottom: 15px;
@@ -390,84 +457,92 @@ main{
     width: 10%;
 }
 
-.header-menu{
- height: 50px;
- display: flex;
- justify-content: space-around;
- align-items: space-evenly;
- padding-right: 125px;
- padding-top: 15px;
+.header-menu {
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-evenly;
+    padding-right: 125px;
+    padding-top: 15px;
 }
 
-.image-menu{
+.image-menu {
     height: 200px;
-    width: 100%; 
-}
-.titre-coeur-header-menu{
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 15px;
-  padding-left:75px ;
-}
-.icon-container{
-    position: relative;
-    
+    width: 100%;
 }
 
-.coeur-plein, .contour-coeur{
-    position:absolute;
+.titre-coeur-header-menu {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 15px;
+}
+
+.icon-container {
+    position: relative;
+
+}
+
+.coeur-plein,
+.contour-coeur {
+    position: absolute;
     left: 40px;
     top: 10px;
     bottom: 5px;
 }
 
 /*animation menu mobil */
- 
-menu-item1{
+
+menu-item1 {
     opacity: 0;
     animation: repas-affichage 0.5s ease-in 1.5s forwards;
- }
- .menu-item2{
+}
+
+.menu-item2 {
     opacity: 0;
     animation: repas-affichage 0.5s ease-in 2s forwards;
- }
- .menu-item3{
+}
+
+.menu-item3 {
     opacity: 0;
     animation: repas-affichage 0.5s ease-in 2.5s forwards;
- }
+}
 
 @keyframes repas-affichage {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
+
 /*animation coche */
-.menu{
+.menu {
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 100%;
     padding-left: 10px;
     position: relative;
     transition: transform 330ms ease-in-out;
     white-space: nowrap;
+    overflow: hidden;
+    height: 69px;
+    background-color: white;
 }
 
-  
-.checkbox-container{
+
+.checkbox-container {
     height: 70px;
-    width: 0;
-    background-color:  var(--vert);
+    background-color: var(--vert);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    position: relative;
-    bottom:15px;
-    right:-15px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
     visibility: collapse;
     overflow-x: hidden;
     display: flex;
@@ -475,323 +550,363 @@ menu-item1{
     justify-content: center;
     transform: translateX(40px);
     transition: all ease 0.5s;
-    
+
 }
 
-.menu:hover .checkbox-container{
+.menu:hover .checkbox-container {
     transform: translateX(0px);
     transition: all ease 0.4s;
     overflow-x: hidden;
     visibility: visible;
-    width: 35%;
-   
+    width: 69px;
+
 }
 
-.menu:hover
-.menu-descriptionn p ,h3{
-    overflow: hidden;
-    white-space: nowrap; 
-    text-overflow: ellipsis;
-    width: 200px;
-}
-
-
- .fa-circle-check{
+.fa-circle-check {
     color: white;
     font-size: 24px;
- } 
+}
 
- .rotation {
+.rotation {
     visibility: hidden;
- }
+}
 
- .menu:hover .rotation{
+.menu:hover .rotation {
     visibility: visible;
-    animation: 1s 1 forwards rotation  ;
- }
+    animation: 1s 1 forwards rotation;
+}
 
 
- @keyframes rotation {
+@keyframes rotation {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    to {     
-    transform: rotate(360deg);
+
+    to {
+        transform: rotate(360deg);
     }
-  }
-.box-menu{
-    padding-left: 50px;
+}
+
+.box-menu {
     margin-RIGHT: 00PX;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 250px;
 }
-.box-menu-2{
-    height: 300px;
-    padding-left: 10%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+
+.box{
+    height:350px;
 }
-main{
+
+main {
     display: flex;
     flex-direction: column;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
-.menu{
+
+.menu {
     display: flex;
     flex-direction: row;
     height: 70px;
     padding: 15px;
 }
-.checkbox-box{
+
+.checkbox-box {
     display: flex;
 
 }
-.menu-description{
-    display:flex;
+
+.menu:hover .menu-description p, .menu-descrimition h3{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:calc(100% - 60px);
+}
+.menu-description {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
     font-size: 8px;
+    
 }
+
 .menu-description p {
     font-size: 15px;
     width: 200px;
 }
-.fa-euro-sign{
+
+.menu-description h3 {
+    width: 200px;
+}
+
+.menu-description,
+p {
+    padding: 0%;
+}
+
+
+.fa-euro-sign {
     font-size: 12px;
     padding-left: 5px;
-    
+
 }
-.price-container{
+
+.price-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    
-  
+
+
 }
+
 .bouton-commander {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
 }
+
 .bouton {
     width: 160px;
 }
 
 /*responsive tablette*/
-@media screen and (min-width:500px) {
+@media screen and (min-width:768px) {
 
-    .loader{
+    .loader {
         top: 25%;
         left: 40%;
     }
-    header{
+
+    .main-container {
+        padding: 0px 10%;
+    }
+
+    header {
         padding-bottom: 0;
     }
-    .intro-header, .paragraf{
+
+    .intro-header,
+    .paragraf {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-bottom:40px;
+        padding-bottom: 40px;
         padding-top: 40px;
     }
+
     .container-heart {
         position: relative;
         width: 90px;
-        top:10px
-      }
-      
-   input{
+        top: 10px
+    }
+
+    input {
         margin-left: 20px;
     }
-    .bouton{
-       border-radius: 45px;
-       width: 190px;
+
+    .bouton {
+        border-radius: 45px;
+        width: 190px;
         height: 3px;
-      margin-top: 0;
-      padding-top: 10px;
-      padding-bottom: 25px;
-      padding-left: 0px;
-      padding-right: 2px;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        padding-left: 0px;
+        padding-right: 2px;
     }
-    .titre-fonctionnement{
+
+    .titre-fonctionnement {
         margin-top: 45px;
-        margin-left: 150px;
+        margin-left: 15%;
     }
-    .section-fonctionnement{
-     display: flex;
-     flex-direction: column;
-     margin: 0;
+
+    .section-fonctionnement {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
     }
-    .fonctionnement{
+
+    .fonctionnement {
         display: flex;
         flex-direction: row;
-       width: 80%;
-       margin-left: 150px;
+        width: 50%;
+       margin-left:30% ;
+     
     }
-    .list-fonctionnement{
+
+    .list-fonctionnement {
         width: 100%;
         display: flex;
         flex-direction: row;
         margin-left: 0;
         height: 190px;
     }
-    .menu-fonctionnement{
+
+    .menu-fonctionnement {
         width: 500px;
     }
-    .bouton-fonctionnement{
+
+    .bouton-fonctionnement {
         font-size: 16px;
     }
-    .fa-1 .fa-2 .fa-3{
+
+    .fa-1 .fa-2 .fa-3 {
         position: relative;
-        left:0px ;
+        left: 0px;
     }
-    .titre-restaurant{
-        margin-left: 200px;
+
+    .titre-restaurant {
+        margin-left: 15%;
         font-size: 30px;
     }
-    .restaurant-box{
+
+    .restaurant-box {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-    .restaurant-card{
+
+    .restaurant-card {
         width: 35%;
     }
-    .restaurant-description{
+
+    .restaurant-description {
         display: flex;
         flex-direction: column;
-       
+
     }
-    .paragraf-restaurant{
+
+    .paragraf-restaurant {
         display: flex;
         align-content: flex-start;
         padding: 2px;
     }
-  
-      .restaurant-heart{
+
+    .restaurant-heart {
         position: relative;
         display: flex;
         justify-content: space-between;
-      }
+    }
+
     .contour-coeur,
     .coeur-plein {
-        position:absolute;
+        position: absolute;
         top: 15px;
         left: 50px;
         font-size: 20px;
-  }
- 
-    footer, .titre-footer, .list-footer {
+    }
+
+    footer,
+    .titre-footer,
+    .list-footer {
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-start;
-        font-size: 12px;
+        font-size: 10px;
     }
-    .titre-footer{
+
+    .titre-footer {
         margin-left: 10px;
-        font-size: 18px;
         margin-right: 30px;
         margin-top: 20px;
     }
-    .list-footer{
-        display: flex ;
+
+    .list-footer {
+        display: flex;
         flex-direction: row;
         width: 50%;
         margin: 0;
         justify-content: space-around;
     }
-  
-    .footer-lien{
-       margin-top: 8%;
-       margin-right: 5px;
-       display: flex;
-       width: 180%;
-    } 
-    .icon-footer{
+
+    .footer-lien {
+        margin-top: 8%;
+        margin-right: 5px;
+        display: flex;
+        width: 180%;
+    }
+
+    .icon-footer {
         margin-left: 3px;
     }
+
     /*destop menu*/
-    .titre-coeur-header-menu{
+    .titre-coeur-header-menu {
         display: flex;
         justify-content: center;
     }
-    .icon-container{
-        position:relative;
+
+    .icon-container {
+        position: relative;
         width: 20px;
-        height: 20px;    
+        height: 20px;
     }
 
-    .header-menu{
+    .header-menu {
         display: flex;
         justify-content: space-around;
         padding-right: 35%;
     }
-    .image-menu{
-    height: 450px;
-    }
-    main{
-    width: 70%;
-    background-color: var(--back);
-    margin-left: 15%;
-    margin-top: -50px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-    .title-menu{
-    margin-top: 15px;
-    margin-bottom: 2%;
-    margin-left: 20%;
-    width: 5%;
-  }
-    .box-menu{
-    display: flex;
-    justify-content: center;
-    margin-left: 10%;
-    
-  }
-    .menu{
-    background-color: white; 
-    margin-bottom: 15px;
-  }
 
-    .menu, h3{
+    .image-menu {
+        height: 450px;
+    }
+
+    main {
+        width: 70%;
+        background-color: var(--back);
+        margin-left: 15%;
+        margin-top: -50px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-menu {
+        margin-top: 15px;
+        margin-bottom: 2%;
+        width: 50px;
+    }
+
+    .box-menu {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .menu {
+        background-color: white;
+        margin-bottom: 15px;
+    }
+
+    .menu,
+    h3 {
         padding-bottom: 2px;
     }
 
-  .description-menu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .menu-description, p {
-    padding: 0%;
-  }
- .fa-euro-sign{
-    padding-left: 2px;
-    font-size: 16px;
-    font-weight: normal;
-  }
 
-  .icon-container{
-    position:relative;
-    width: 10px;
-    height: 20px;    
-}
-  .bouton-commander{
-    padding-bottom: 30px;
-    padding-top: 30px;
-  }
+    .fa-euro-sign {
+        padding-left: 2px;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .icon-container {
+        position: relative;
+        width: 10px;
+        height: 20px;
+    }
+
+    .bouton-commander {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
 }
 
 /***** responsive ordi*****/
-@media (min-width: 992px) { 
-
-}
+@media (min-width: 1024px) {}
