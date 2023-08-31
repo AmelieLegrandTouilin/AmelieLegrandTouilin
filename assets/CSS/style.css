@@ -354,12 +354,6 @@ input :active {
 }
 
 /*animation coeur*/
-
-.checkbox-box {
-    display: flex;
-
-}
-
 .restaurant-heart {
     display: flex;
     justify-content: space-between;
@@ -550,7 +544,7 @@ menu-item1 {
     justify-content: center;
     transform: translateX(40px);
     transition: all ease 0.5s;
-
+    width: 69px;
 }
 
 .menu:hover .checkbox-container {
@@ -558,9 +552,8 @@ menu-item1 {
     transition: all ease 0.4s;
     overflow-x: hidden;
     visibility: visible;
-    width: 69px;
-
 }
+
 
 .fa-circle-check {
     color: white;
@@ -613,12 +606,8 @@ main {
     padding: 15px;
 }
 
-.checkbox-box {
-    display: flex;
 
-}
-
-.menu:hover .menu-description p, .menu-descrimition h3{
+.menu:hover .menu-description p, .menu-descrimition h3 {
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
@@ -630,7 +619,6 @@ main {
     justify-content: space-around;
     width: 100%;
     font-size: 8px;
-    
 }
 
 .menu-description p {
@@ -642,24 +630,26 @@ main {
     width: 200px;
 }
 
-.menu-description,
-p {
+.menu-description, p {
     padding: 0%;
 }
-
 
 .fa-euro-sign {
     font-size: 12px;
     padding-left: 5px;
-
 }
 
 .price-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-
-
+    transform: translateX(5px);
+    transition: all ease 0.5s;
+    
+}
+.menu:hover .price-container{
+    transform: translateX(-70px);
+    transition: all ease 0.4s; 
+   
 }
 
 .bouton-commander {
@@ -909,4 +899,236 @@ p {
 }
 
 /***** responsive ordi*****/
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    .loader {
+        top: 25%;
+        left: 40%;
+    }
+
+    .main-container {
+        padding: 0px 10%;
+    }
+
+    header {
+        padding-bottom: 0;
+    }
+
+    .intro-header,
+    .paragraf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .container-heart {
+        position: relative;
+        width: 90px;
+        top: 10px
+    }
+
+    input {
+        margin-left: 20px;
+    }
+
+    .bouton {
+        border-radius: 45px;
+        width: 190px;
+        height: 3px;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        padding-left: 0px;
+        padding-right: 2px;
+    }
+
+    .titre-fonctionnement {
+        margin-top: 45px;
+        margin-left: 15%;
+    }
+
+    .section-fonctionnement {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .fonctionnement {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+       margin-left:30% ;
+     
+    }
+
+    .list-fonctionnement {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-left: 0;
+        height: 190px;
+    }
+
+    .menu-fonctionnement {
+        width: 500px;
+    }
+
+    .bouton-fonctionnement {
+        font-size: 16px;
+    }
+
+    .fa-1 .fa-2 .fa-3 {
+        position: relative;
+        left: 0px;
+    }
+
+    .titre-restaurant {
+        margin-left: 15%;
+        font-size: 30px;
+    }
+
+    .restaurant-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .restaurant-card {
+        width: 35%;
+    }
+
+    .restaurant-description {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .paragraf-restaurant {
+        display: flex;
+        align-content: flex-start;
+        padding: 2px;
+    }
+
+    .restaurant-heart {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contour-coeur,
+    .coeur-plein {
+        position: absolute;
+        top: 15px;
+        left: 50px;
+        font-size: 20px;
+    }
+
+    footer,
+    .titre-footer,
+    .list-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 10px;
+    }
+
+    .titre-footer {
+        margin-left: 10px;
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+
+    .list-footer {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin: 0;
+        justify-content: space-around;
+    }
+
+    .footer-lien {
+        margin-top: 8%;
+        margin-right: 5px;
+        display: flex;
+        width: 180%;
+    }
+
+    .icon-footer {
+        margin-left: 3px;
+    }
+
+    /*destop menu*/
+    .titre-coeur-header-menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon-container {
+        position: relative;
+        width: 20px;
+        height: 20px;
+    }
+
+    .header-menu {
+        display: flex;
+        justify-content: space-around;
+        padding-right: 35%;
+    }
+
+    .image-menu {
+        height: 450px;
+    }
+
+    main {
+        width: 70%;
+        background-color: var(--back);
+        margin-left: 15%;
+        margin-top: -50px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-menu {
+        margin-top: 15px;
+        margin-bottom: 2%;
+        width: 50px;
+    }
+
+    .box-menu {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .menu {
+        background-color: white;
+        margin-bottom: 15px;
+    }
+
+    .menu,
+    h3 {
+        padding-bottom: 2px;
+    }
+
+
+    .fa-euro-sign {
+        padding-left: 2px;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .icon-container {
+        position: relative;
+        width: 10px;
+        height: 20px;
+    }
+
+    .bouton-commander {
+        padding-bottom: 30px;
+        padding-top: 30px;
+    }
+}
