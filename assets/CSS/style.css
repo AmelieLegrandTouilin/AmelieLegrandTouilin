@@ -13,6 +13,10 @@ h3,
     font-family: 'Shriklhand';
 }
 
+p {
+    font-family: 'roboto';
+}
+
 h1 {
     font-size: 30px;
 }
@@ -554,7 +558,19 @@ menu-item1 {
     visibility: visible;
 }
 
+.menu:hover .menu-description p{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 60px );
+}
 
+.menu:hover .menu-description h3{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 60px );
+}
 .fa-circle-check {
     color: white;
     font-size: 24px;
@@ -644,6 +660,7 @@ main {
     flex-direction: row;
     transform: translateX(5px);
     transition: all ease 0.5s;
+    margin-top: 20px;
     
 }
 .menu:hover .price-container{
