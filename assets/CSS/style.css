@@ -60,17 +60,10 @@ a {
     top: 30%;
     left: 25%;
     border: 16px solid var(--violet);
-    /* Couleur de la bordure du loader */
     border-top: 16px solid var(--rose);
-    /* Couleur de la bordure du dessus */
-    border-radius: 50%;
-    /* Forme circulaire du loader */
     width: 200px;
-    /* Largeur du loader */
     height: 200px;
-    /* Hauteur du loader */
     animation: spin 2s linear forwards;
-    /* Animation de rotation */
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -78,30 +71,22 @@ a {
 @keyframes spin {
     0% {
         transform: rotate(0deg);
-    }
-
-    /* Angle initial de rotation */
+    }/* Angle initial de rotation */
     100% {
         transform: rotate(360deg);
-    }
-
-    /* Angle final de rotation */
+    }/* Angle final de rotation */
     0% {
         opacity: 0.5;
     }
-
     50% {
         opacity: 1;
     }
-
     75% {
         opacity: 1;
     }
-
     85% {
         opacity: 0.5;
     }
-
     100% {
         opacity: 0;
         display: none;
