@@ -365,7 +365,6 @@ input :active {
 .coeur-plein {
     opacity: 0;
 }
-
 .coeur-plein:hover {
     color: var(--violet);
     opacity: 1;
@@ -516,8 +515,6 @@ menu-item1 {
     height: 69px;
     background-color: white;
 }
-
-
 .checkbox-container {
     height: 70px;
     background-color: var(--vert);
@@ -535,21 +532,18 @@ menu-item1 {
     transition: all ease 0.5s;
     width: 69px;
 }
-
 .menu:hover .checkbox-container {
     transform: translateX(0px);
     transition: all ease 0.4s;
     overflow-x: hidden;
     visibility: visible;
 }
-
 .menu:hover .menu-description p{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     max-width: calc(100% - 60px );
 }
-
 .menu:hover .menu-description h3{
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -560,16 +554,13 @@ menu-item1 {
     color: white;
     font-size: 24px;
 }
-
 .rotation {
     visibility: hidden;
 }
-
 .menu:hover .rotation {
     visibility: visible;
     animation: 1s 1 forwards rotation;
 }
-
 
 @keyframes rotation {
     from {
