@@ -1,9 +1,8 @@
 /***** general*****/
 
 * {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     color: black;
-    font-weight: bold;
 }
 
 h1,h2,h3,.titre-footer {
@@ -14,8 +13,10 @@ p {
     font-family: 'roboto';
 }
 
-h1 {
-    font-size: 30px;
+.header-title {
+    font-size: 35px;
+    font-family: 'Shrikland';
+    font-weight: bold;
 }
 
 h3 {
@@ -132,11 +133,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 60px;
 }
 
 .logo-image {
-    height: 25px;
+    height: 30px;
 }
 
 .formulaire-header {
@@ -155,17 +156,16 @@ a {
 
 .fa-location-dot {
     color: black;
-    padding-left: 15%;
+    padding-left: 30px;
 }
 
 input {
     border: none;
     background-color: var(--main);
     height: 30px;
-    margin-left: 3px;
-    background-color: #99E2D0;
+    margin-left: 5px;
     font-weight: bolder;
- 
+    font-size: 18px;
 
 }
 
@@ -189,14 +189,13 @@ input :active {
     width: 80%;
 }
 
-.bouton {
+.bouton-header{
     text-decoration: none;
     font-weight: bold;
     background: rgb(147,86,220);
     background: linear-gradient(347deg, rgba(147,86,220,1) 46%, rgba(255,121,218,1) 100%);
     color: white;
     padding: 3%;
-    padding-right: 170px;
     padding-left: 20px;
     border-radius: 25px;
     font-size: 14px;
@@ -208,7 +207,7 @@ input :active {
     white-space: nowrap; 
 }
 
-.bouton:hover {
+.bouton-header {
     background: rgb(163, 111, 228);
     background: linear-gradient(0deg, rgb(163, 108, 230) 0%, rgb(236, 124, 204) 78%);
     box-shadow: rgba(5, 0, 0, 0.2) 0px 7px 29px 0px;
@@ -224,6 +223,7 @@ input :active {
     list-style: none;
     display: flex;
     justify-content: space-around;
+    width: 100%;
 }
 
 .section-fonctionnement {
@@ -243,6 +243,7 @@ input :active {
     flex-direction: column;
     justify-content: space-around;
     height: 250px;
+    width: 100%;
 }
 
 .menu-fonctionnement {
@@ -254,36 +255,42 @@ input :active {
 .fa-1,
 .fa-2,
 .fa-3{
-    margin-top: 20px;
     position: relative;
-    left: 20px;
     z-index: 1;
-}
-.fa-1,
-.fa-2,
-.fa-3{
-    color: white;
-    position: absolute;
-    background-color: var(--violet);
-    padding: 1%;
-    border-radius: 100%;
-    margin-right: 3px;
-    font-size: 20px;
 }
 
 .bouton-fonctionnement {
-    text-decoration: none;
+    width: 85%;
     background-color: var(--back);
     border-radius: 20px;
-    width: 300px;
-    height: 60px;
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    font-weight: bold;
-    position: relative;
+    padding: 10px 25px;
 }
+
+.mr-1{
+    margin-right: 15px;
+}
+
+.numbers{
+    position: relative;
+    top: 0px;
+    right: -8%;
+    width: 30px;
+    height: 31px;
+    padding:  11px;
+    color: white;
+    background-color: var(--violet);
+    z-index: 76;
+    border-radius: 100%;
+    margin-right: 3px;
+    font-size: 12px;
+
+}
+
 
 .fa-solid:hover {
     color: var(--violet);
@@ -299,6 +306,7 @@ input :active {
     margin-bottom: 15px;
     margin-left: 25px;
     margin-top: 10px;
+    font-size: 28px;
 }
 
 .restaurant-box {
@@ -363,9 +371,9 @@ input :active {
 .contour-coeur,
 .coeur-plein {
     position: absolute;
-    top: 15px;
     right: 20px;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .coeur-plein {
@@ -431,15 +439,13 @@ footer,
 }
 .titre-menu {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 90px;
     font-style: italic;
     font-family: 'Shrikhand';
-    font-family: 'roboto';
-    font-size: 18px;
+    font-size: 28px;
     margin-top: 25px;
     margin-bottom: 15px;
-    border-bottom: 3px solid var(--vert);
-    width: 10%;
+    width: 95%;
 }
 
 .header-menu {
@@ -470,9 +476,8 @@ footer,
 .coeur-plein,
 .contour-coeur {
     position: absolute;
-   left: 40px;
-    top: 10px;
-    bottom: 5px;
+    top: 30px;
+    font-size: 25px;
 }
 
 /*animation menu mobil */
@@ -581,6 +586,7 @@ menu-item1 {
     flex-direction: column;
     justify-content: space-around;
     height: 250px;
+    margin-bottom: 50px;
 }
 
 .box{
@@ -647,8 +653,21 @@ menu-item1 {
     padding-bottom: 30px;
 }
 
-.bouton {
+.button {
     width: 160px;
+    text-decoration: none;
+    font-weight: bold;
+    background: rgb(147,86,220);
+    background: linear-gradient(347deg, rgba(147,86,220,1) 46%, rgba(255,121,218,1) 100%);
+    color: white;
+    padding: 4%;
+    border-radius: 25px;
+    font-size: 14px;
+    margin-bottom: 0;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap; 
 }
 
 /*responsive tablette*/
@@ -678,6 +697,7 @@ menu-item1 {
         align-items: center;
         padding-bottom: 40px;
         padding-top: 40px;
+        width: 80%;
     }
 
     .container-heart {
@@ -855,6 +875,7 @@ menu-item1 {
         margin-top: 15px;
         margin-bottom: 2%;
         width: 50px;
+        border-bottom: var(--vert);
     }
 
     .box-menu {
@@ -1094,12 +1115,12 @@ menu-item1 {
         margin-top: 15px;
         margin-bottom: 2%;
         width: 50px;
+        border-bottom: 2px solid green;
     }
 
     .box-menu {
         display: flex;
         justify-content: center;
-
     }
 
     .menu {
