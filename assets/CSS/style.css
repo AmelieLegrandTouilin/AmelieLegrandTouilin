@@ -5,17 +5,13 @@
     color: black;
 }
 
-h1,h2,h3,.titre-footer {
-    font-family: 'Shriklhand';
-}
-
 p {
-    font-family: 'roboto';
+    font-family: 'roboto',sans-serif;
 }
 
 .header-title {
     font-size: 35px;
-    font-family: 'Shrikland';
+    font-family: 'Shrikland'sans-serif;
     font-weight: bold;
 }
 
@@ -156,7 +152,8 @@ a {
 
 .fa-location-dot {
     color: black;
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-right: 15px;
 }
 
 input {
@@ -166,13 +163,11 @@ input {
     margin-left: 5px;
     font-weight: bolder;
     font-size: 18px;
-
+    width:140px;
 }
-
 input :active {
     border-color: none;
     text-decoration: none;
-    
 }
 
 .intro-header {
@@ -214,21 +209,15 @@ input :active {
 }
 
 /*fonctionnement*/
-.titre-fonctionnement {
-    margin-left: 10%;
-}
 
 .menu-fonctionnement {
     text-decoration: none;
     list-style: none;
-    display: flex;
-    justify-content: space-around;
     width: 100%;
 }
 
 .section-fonctionnement {
-    margin-top: 30px;
-    margin-left: 5px;
+    padding: 40px 30px;
 }
 
 .fonctionnement {
@@ -260,7 +249,7 @@ input :active {
 }
 
 .bouton-fonctionnement {
-    width: 85%;
+    width: 100%;
     background-color: var(--back);
     border-radius: 20px;
     position: relative;
@@ -288,9 +277,7 @@ input :active {
     border-radius: 100%;
     margin-right: 3px;
     font-size: 12px;
-
 }
-
 
 .fa-solid:hover {
     color: var(--violet);
@@ -373,7 +360,7 @@ input :active {
     position: absolute;
     right: 20px;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .coeur-plein {
@@ -391,7 +378,6 @@ footer,
     background-color: #2d3436;
     display: flex;
     flex-direction: column;
-
 }
 
 .titre-footer {
@@ -415,7 +401,6 @@ footer,
 
 .footer-lien {
     color: white;
-
 }
 
 .fa-utensils,
@@ -426,6 +411,12 @@ footer,
 }
 
 /*page menu"*/
+
+.h3menu{
+    font-weight: bold;
+    font-size: 19px;
+    margin-bottom: 8px;
+}
 .main-container {
     width: 100%;
     background-color: var(--back);
@@ -439,7 +430,7 @@ footer,
 }
 .titre-menu {
     font-weight: bold;
-    font-size: 90px;
+    font-size: 60px;
     font-style: italic;
     font-family: 'Shrikhand';
     font-size: 28px;
@@ -476,7 +467,7 @@ footer,
 .coeur-plein,
 .contour-coeur {
     position: absolute;
-    top: 30px;
+    top: 20px;
     font-size: 25px;
 }
 
@@ -581,7 +572,7 @@ menu-item1 {
 }
 
 .box-menu {
-    margin-RIGHT: 00PX;
+    margin-right: 00PX;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -618,6 +609,7 @@ menu-item1 {
 .menu-description p {
     font-size: 15px;
     width: 200px;
+    font-weight: bold;
 }
 
 .menu-description h3 {
@@ -629,8 +621,7 @@ menu-item1 {
 }
 
 .fa-euro-sign {
-    font-size: 12px;
-    padding-left: 5px;
+    font-size: 15px;
 }
 
 .price-container {
@@ -639,7 +630,7 @@ menu-item1 {
     transform: translateX(5px);
     transition: all ease 0.5s;
     margin-top: 20px;
-    
+    font-weight: bold;
 }
 .menu:hover .price-container{
     transform: translateX(-70px);
@@ -677,19 +668,21 @@ menu-item1 {
         top: 25%;
         left: 40%;
     }
-
     .le-site{
             width: 100%;
         }
+    main{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
     .main-container {
         padding: 0px 10% 10%;
-        
     }
-
     header {
         padding-bottom: 0;
+        width: 100%;
     }
-
     .intro-header,
     .paragraf {
         display: flex;
@@ -697,19 +690,16 @@ menu-item1 {
         align-items: center;
         padding-bottom: 40px;
         padding-top: 40px;
-        width: 80%;
+        width: 100%;
     }
-
     .container-heart {
         position: relative;
         width: 90px;
         top: 10px
     }
-
     input {
         margin-left: 20px;
     }
-
     .bouton {
         border-radius: 45px;
         width: 190px;
@@ -720,26 +710,22 @@ menu-item1 {
         padding-left: 0px;
         padding-right: 2px;
     }
-
     .titre-fonctionnement {
         margin-top: 45px;
         margin-left: 15%;
     }
-
     .section-fonctionnement {
         display: flex;
         flex-direction: column;
         margin: 0;
+        width: 100%;
     }
-
     .fonctionnement {
         display: flex;
         flex-direction: row;
-        width: 50%;
-       margin-left:30% ;
-     
+        width: 100%;
+       background-color: #99E2D0;
     }
-
     .list-fonctionnement {
         width: 100%;
         display: flex;
@@ -747,54 +733,43 @@ menu-item1 {
         margin-left: 0;
         height: 190px;
     }
-
     .menu-fonctionnement {
         width: 500px;
     }
-
     .bouton-fonctionnement {
         font-size: 16px;
     }
-
     .fa-1 .fa-2 .fa-3 {
         position: relative;
         left: 0px;
     }
-
     .titre-restaurant {
         margin-left: 15%;
         font-size: 30px;
     }
-
     .restaurant-box {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .restaurant-card {
         width: 35%;
     }
-
     .restaurant-description {
         display: flex;
         flex-direction: column;
-
     }
-
     .paragraf-restaurant {
         display: flex;
         align-content: flex-start;
         padding: 2px;
     }
-
     .restaurant-heart {
         position: relative;
         display: flex;
         justify-content: space-between;
     }
-
     .contour-coeur,
     .coeur-plein {
         position: absolute;
@@ -802,7 +777,6 @@ menu-item1 {
         left: 50px;
         font-size: 20px;
     }
-
     footer,
     .titre-footer,
     .list-footer {
@@ -812,13 +786,11 @@ menu-item1 {
         justify-content: flex-start;
         font-size: 10px;
     }
-
     .titre-footer {
         margin-left: 10px;
         margin-right: 30px;
         margin-top: 20px;
     }
-
     .list-footer {
         display: flex;
         flex-direction: row;
@@ -826,18 +798,15 @@ menu-item1 {
         margin: 0;
         justify-content: space-around;
     }
-
     .footer-lien {
         margin-top: 8%;
         margin-right: 5px;
         display: flex;
         width: 180%;
     }
-
     .icon-footer {
         margin-left: 3px;
     }
-
     /*destop menu*/
     .titre-coeur-header-menu {
         display: flex;
@@ -876,7 +845,18 @@ menu-item1 {
         margin-bottom: 2%;
         width: 50px;
         border-bottom: var(--vert);
+        font-size: 20px;
+        display: inline-block;
+        text-decoration: underline;
+        color: red;
+        background-color: yellow;
     }
+    .vertical-line {
+        border-left: 2px solid green; 
+        height: 100px; 
+        position: absolute; 
+        left: calc(100% + 10px); 
+      }
 
     .box-menu {
         display: flex;
@@ -911,6 +891,67 @@ menu-item1 {
         padding-bottom: 30px;
         padding-top: 30px;
     }
+    /*animation coche */
+.menu {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    position: relative;
+    transition: transform 330ms ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 69px;
+    background-color: white;
+}
+.checkbox-container {
+    height: 70px;
+    background-color: var(--vert);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    visibility: collapse;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(40px);
+    transition: all ease 0.5s;
+    width: 69px;
+}
+.menu:hover .checkbox-container {
+    transform: translateX(0px);
+    transition: all ease 0.4s;
+    overflow-x: hidden;
+    visibility: visible;
+}
+
+.fa-circle-check {
+    color: white;
+    font-size: 24px;
+}
+.rotation {
+    visibility: hidden;
+}
+.menu:hover .rotation {
+    visibility: visible;
+    animation: 1s 1 forwards rotation;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
 }
 
 /***** responsive ordi*****/
@@ -926,6 +967,8 @@ menu-item1 {
 
     .main-container {
         padding: 0px 10%;
+        width: 80%;
+        margin-left: 200px;
     }
 
     header {
@@ -1121,7 +1164,6 @@ menu-item1 {
     .box-menu {
         display: flex;
         justify-content: center;
-    }
 
     .menu {
         background-color: white;
