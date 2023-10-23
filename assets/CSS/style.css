@@ -121,18 +121,20 @@ a {
 }
 
 /**header**/
-.logo {
+    .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 63px;
+    }
+
+    .logo-image{
+    height: 36px;
+    top: 14px;
+    left: 89px;
 }
 
-.logo-image {
-    height: 30px;
-}
-
-.formulaire-header {
+    .formulaire-header {
     background-color:#EAEAEA;
     width: 100%;
     padding-left: 0;
@@ -146,13 +148,13 @@ a {
     
 }
 
-.fa-location-dot {
+    .fa-location-dot {
     color: black;
     padding-left: 20px;
     padding-right: 15px;
 }
 
-input {
+    input {
     border: none;
     background-color: var(--main);
     height: 30px;
@@ -161,33 +163,33 @@ input {
     font-size: 18px;
     width:140px;
 }
-input :active {
+    input :active {
     border-color: none;
     text-decoration: none;
 }
 
-.intro-header{
+    .intro-header{
     padding-top: 40px;
     padding-bottom:  40px;
 }
 
-.text-header, .intro-header {
+    .text-header, .intro-header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
     background-color: var(--back);
 }
-.header-title{
+    .header-title{
     size: 20px;
     width:70%;
     margin-bottom: 15px;
 }
-.paragraf{
+    .paragraf{
     size: 18px;
     width: 75%;
 }
-.bouton-header{
+    .bouton-header{
     height: 50px;
     text-decoration: none;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -209,6 +211,8 @@ input :active {
 
 .titre-fonctionnement{
     margin-bottom: 15px;
+    font-size: 24px;
+    font-family: 'roboto' , sans-serif;
 }
 
 .menu-fonctionnement {
@@ -301,7 +305,8 @@ input :active {
     margin-bottom: 20px;
     margin-left: 25px;
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 24px;
+    font-family: 'roboto', sans-serif;
 }
 
 .restaurant-box {
@@ -437,6 +442,26 @@ footer,
 
 /*page menu"*/
 
+.header-menu {
+    height: 63px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-right: 80px;
+    padding-top: 17px;
+}
+
+.logo-image1{
+    top: 17px;
+    height: 28px;
+    
+}
+.fa-arrow-left{
+    width: 30px;
+    height: 30px;
+    top: 17px;
+    left: 17px;
+}
+
 .h3menu{
     font-weight: 700;
     font-size: 18px;
@@ -462,14 +487,7 @@ footer,
     width: 95%;
 }
 
-.header-menu {
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    padding-right: 90px;
-    padding-top: 15px;
-    font-weight: roboto, sans serif;
-}
+
 
 .image-menu {
     height: 200px;
@@ -693,7 +711,6 @@ menu-item1 {
     width: 186px;
     text-decoration: none;
     font-weight: bold;
-    background: rgb(147,86,220);
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     color: white;
     padding: 4%;
@@ -704,13 +721,43 @@ menu-item1 {
     text-align: center;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     white-space: nowrap; 
+    font-family: 'roboto', sans-serif;
 }
 
 /*responsive tablette*/
 @media screen and (min-width:768px) {
+ .bouton-header{
+    height: 50px;
+    padding: 2%;
+ }  
+   /*menu*/
+   .header-menu{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+   }
+   .titre-coeur-header-menu{
+    margin-left: 150px;
+    width: 60%;
+   }
 
-    
-}
+    /*menu*/
+   .title-menu{
+    width: 5%;
+    border-bottom: 3px solid #99E2D0;
+   }
+   .menu:hover .menu-description p,
+    .menu:hover .menu-description h3 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+   .button{
+    padding: 2%;
+   }
+
+   }
 
 
 /***** responsive ordi*****/
@@ -720,7 +767,7 @@ menu-item1 {
         left: 40%;
     }
     .logo-image{
-        margin-left:300px ;
+        margin-left:0px ;
     }
     .text-header, .intro-header{
     display: flex;
@@ -729,7 +776,7 @@ menu-item1 {
     }   
     .header-title{
         font-size: 40px;
-        width: 100%;
+        width: 80%;
     }
     .paragraf{
         width: 100%;
@@ -776,7 +823,7 @@ menu-item1 {
     .restaurant-card{
         width: 45%;
     }
-    .footer-destop, .list-footer{
+    .footer-destop{
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -784,11 +831,15 @@ menu-item1 {
     }
     .list-footer{
         display: flex;
-        align-items: center;
+        flex-direction: row;
         margin-top: 4px;
     }
     .titre-footer{
         margin-left: 70px;
+    }
+
+    .margin{
+        margin-left: 30px;
     }
     /*menu*/
     .header-menu{
