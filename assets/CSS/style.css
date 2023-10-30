@@ -397,13 +397,15 @@ a {
 }
 
 .coeur-plein {
-    
+    opacity: 0;
 }
 .coeur-plein:hover {
-    
+    visibility: visible;
     opacity: 1;
 }
-
+.contour-coeur:hover{
+    opacity: 0;
+}
 /*footer*/
 
 footer,
@@ -610,7 +612,7 @@ menu-item1 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: calc(100% - 160px );
+    max-width: calc(100% - 75px );
     text-decoration: none;
     color: black;
 }
@@ -618,7 +620,7 @@ menu-item1 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: calc(100% - 70px );
+    max-width: calc(100% - 75px );
     text-decoration: none;
     color: black;
 }
@@ -664,12 +666,7 @@ menu-item1 {
     padding: 15px;
 }
 
-.menu:hover .menu-description p, .menu-descrimition h3 {
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-    width:calc(100% - 60px);
-}
+
 .menu-description {
     display: flex;
     flex-direction: column;
@@ -680,11 +677,11 @@ menu-item1 {
 
 .menu-description p {
     font-size: 15px;
-    width: 200px;
+    width: 100%;
 }
 
 .menu-description h3 {
-    width: 200px;
+    width: 100%;
 }
 
 .menu-description, p {
