@@ -400,12 +400,14 @@ a {
     opacity: 0;
 }
 .coeur-plein:hover {
-    visibility: visible;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     opacity: 1;
+    transition: background-image 0.5s, color 0.5s;
+    -webkit-font-smoothing: antialiased;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.contour-coeur:hover{
-    opacity: 0;
-}
+
 /*footer*/
 
 footer,
@@ -528,9 +530,12 @@ footer,
     opacity: 0;
 }
 .coeur-plein2:hover {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     opacity: 1;
-    transition: background 0.5s, color 0.5s;
+    transition: background-image 0.5s, color 0.5s;
+    -webkit-font-smoothing: antialiased;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .title-menu{
     border-bottom: 3px solid  #99E2D0;
@@ -697,7 +702,7 @@ menu-item1 {
     flex-direction: row;
     transform: translateX(5px);
     transition: all ease 0.5s;
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: bold;
 }
 
@@ -878,7 +883,7 @@ menu-item1 {
         position: absolute;
         top: 30px;
         font-size: 30px;
-        right: 100px;
+        right: 20%;
         border: 1px;
     }
     .menu-item1, .menu-item2, .menu-item3{
